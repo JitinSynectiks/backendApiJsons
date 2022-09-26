@@ -1,0 +1,18 @@
+[
+    {
+        "supplierId": 1,
+        "name": "Amazon inc",
+        "contact": "+91 9876543210",
+        "telephoneNo": "012-65432",
+        "mailingAddress": "Street no. B6, Miami",
+        "country": "USA"
+    },
+    {
+        "supplierId" : 2,
+        "name" : "flipkart inc",
+        "contact": "+91 9876543210",
+        "telephoneNo": "012-65432",
+        "mailingAddress":"Street no. A5, Hyderabad",
+        "country" : "india"
+    }
+]

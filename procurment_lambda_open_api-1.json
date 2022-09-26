@@ -1,0 +1,2080 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "3.0.1",
+        "title": "Procurment-lambda-open-api",
+        "license": {
+            "name": "MIT"
+        },
+        "contact": {}
+    },
+    "servers": [
+        {
+            "url": "/",
+            "variables": {
+                "successCode": {
+                    "enum": [
+                        "200"
+                    ],
+                    "default": "200"
+                }
+            }
+        }
+    ],
+    "paths": {
+        "/request": {
+            "get": {
+                "summary": "Details of request",
+                "operationId": "getRequests",
+                "tags": [
+                    "request"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "searchRequest is used to get the list of the requests.",
+                        "headers": {
+                            "x-next": {
+                                "description": "Request List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch request Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/request"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add request",
+                "operationId": "addRequest",
+                "requestBody": {
+                    "description": "add new request",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/request"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add request successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add request Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "request"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit request Detail",
+                "operationId": "updateRequest",
+                "requestBody": {
+                    "description": "updateRequest is used for modifing request",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/request"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit request",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit request Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "request"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "detail about deleteRequest",
+                "operationId": "daleteRequests",
+                "requestBody": {
+                    "description": "delete request",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete request is use for delete request by id",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete request ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete request Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "request"
+                ],
+                "parameters": []
+            }
+        },
+        "/product": {
+            "get": {
+                "summary": "Details of product",
+                "operationId": "getProducts",
+                "tags": [
+                    "product"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "searchProduct is used to get the list of the Products.",
+                        "headers": {
+                            "x-next": {
+                                "description": "Product List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch product successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/product"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add product",
+                "operationId": "addProduct",
+                "requestBody": {
+                    "description": "add new product",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/product"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add product successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add product Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "product"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit product Detail",
+                "operationId": "updateProduct",
+                "requestBody": {
+                    "description": "updateProduct is used for modifing product",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/product"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit product",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit product Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "product"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "detail about deleteProduct",
+                "operationId": "daleteProduct",
+                "requestBody": {
+                    "description": "delete product",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete product is use for delete product by id",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete product ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete product Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "product"
+                ],
+                "parameters": []
+            }
+        },
+        "/currency": {
+            "get": {
+                "summary": "Details of currency",
+                "operationId": "getCurrency",
+                "tags": [
+                    "currency"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "search currency is used to get the list of the currency.",
+                        "headers": {
+                            "x-next": {
+                                "description": "currency List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch currency successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/currency"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add currency",
+                "operationId": "addCurrency",
+                "requestBody": {
+                    "description": "add new currency",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/currency"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add currency successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add currency Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "currency"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit currency Detail",
+                "operationId": "updateCurrency",
+                "requestBody": {
+                    "description": "update currency is used for modifing currency",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/currency"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit currency",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit currency Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "currency"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "detail about delete currency",
+                "operationId": "deleteCurrency",
+                "requestBody": {
+                    "description": "delete currency",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete currency is use for delete currency by id",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete currency ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete currency Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "currency"
+                ],
+                "parameters": []
+            }
+        },
+        "/supplier": {
+            "get": {
+                "summary": "Details of supplier",
+                "operationId": "getSupplier",
+                "tags": [
+                    "supplier"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "search supplier is used to get the list of the supplier.",
+                        "headers": {
+                            "x-next": {
+                                "description": "supplier List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch supplier successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/supplier"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add supplier",
+                "operationId": "addSupplier",
+                "requestBody": {
+                    "description": "add new supplier",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/supplier"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add supplier successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add supplier Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "supplier"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit supplier Detail",
+                "operationId": "updateSupplier",
+                "requestBody": {
+                    "description": "update supplier is used for modifing supplier",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/supplier"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit supplier",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit supplier Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "supplier"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "detail about delete supplier",
+                "operationId": "deleteSupplier",
+                "requestBody": {
+                    "description": "delete supplier",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete supplier is use for delete supplier by id",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete supplier ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete supplier Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "supplier"
+                ],
+                "parameters": []
+            }
+        },
+        "/purchaseOrder": {
+            "get": {
+                "summary": "Details of purchaseOrder",
+                "operationId": "getPurchaseOrder",
+                "tags": [
+                    "purchaseOrder"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "search purchaseOrder is used to get the list of the purchaseOrder.",
+                        "headers": {
+                            "x-next": {
+                                "description": "purchaseOrder List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch purchaseOrder successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/purchaseOrder"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add purchaseOrder",
+                "operationId": "addPurchaseOrder",
+                "requestBody": {
+                    "description": "add new purchaseOrder",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/purchaseOrder"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add purchaseOrder successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add purchaseOrder Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "purchaseOrder"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit purchaseOrder Detail",
+                "operationId": "updatePurchaseOrder",
+                "requestBody": {
+                    "description": "update purchaseOrder is used for modifing purchaseOrder",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/purchaseOrder"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit purchaseOrder",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit purchaseOrder Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "purchaseOrder"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "detail about delete purchaseOrder",
+                "operationId": "deletePurchaseOrder",
+                "requestBody": {
+                    "description": "delete purchaseOrder",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete purchaseOrder is use for delete purchaseOrder by id",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete purchaseOrder ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete purchaseOrder Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "purchaseOrder"
+                ],
+                "parameters": []
+            }
+        },
+        "/invoice": {
+            "get": {
+                "summary": "Details of invoice",
+                "operationId": "getInvoice",
+                "tags": [
+                    "invoice"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "search invoice is used to get the list of the invoice.",
+                        "headers": {
+                            "x-next": {
+                                "description": "invoice List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch invoice successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/invoice"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add invoice",
+                "operationId": "addInvoice",
+                "requestBody": {
+                    "description": "add new invoice",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/invoice"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add invoice successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add invoice Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "invoice"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit invoice Detail",
+                "operationId": "updateInvoice",
+                "requestBody": {
+                    "description": "update invoice is used for modifing invoice",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/invoice"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit invoice",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit invoice Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "invoice"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "detail about delete invoice",
+                "operationId": "deleteInvoice",
+                "requestBody": {
+                    "description": "delete invoice",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete invoice is use for delete invoice by id",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete invoice ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete invoice Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "invoice"
+                ],
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "request": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the Requisition"
+                    },
+                    "createdBy": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of requester"
+                    },
+                    "createdOn": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "date of request"
+                    },
+                    "updatedBy": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of updater"
+                    },
+                    "updatedOn": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "date of update"
+                    },
+                    "approvedBy": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the approver"
+                    },
+                    "approvedOn": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "date of approval"
+                    },
+                    "desiredDate": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "desired delivery date by requester"
+                    },
+                    "location": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "location of requester"
+                    },
+                    "requestType": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "type of request"
+                    },
+                    "note": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "note related to request"
+                    },
+                    "state": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "state of request"
+                    },
+                    "progressStage": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "progress stage of request"
+                    },
+                    "totalAmount": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "total amount of request"
+                    },
+                    "department": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "department of requester"
+                    },
+                    "document": {
+                        "type": "array",
+                        "x-count": 2,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "format": "int64",
+                                    "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                    "description": "id of the document"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "x-faker": "{{commerce.productName}}",
+                                    "description": "name of document"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "x-faker": "{{commerce.productName}}",
+                                    "description": "url of document"
+                                }
+                            }
+                        }
+                    },
+                    "products": {
+                        "type": "array",
+                        "x-count": 2,
+                        "items": {
+                            "$ref": "#/components/schemas/product",
+                            "quantity": {
+                                "type": "integer",
+                                "format": "int64",
+                                "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                "description": "quantity of item"
+                            }
+                        }
+                    }
+                }
+            },
+            "document": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the document"
+                    },
+                    "name": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of document"
+                    },
+                    "url": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "url of document"
+                    }
+                }
+            },
+            "product": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the Requisition"
+                    },
+                    "itemName": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of product"
+                    },
+                    "itemType": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "type of product"
+                    },
+                    "unit": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "unit of product"
+                    },
+                    "category": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "category of product"
+                    },
+                    "supplierId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the supplier"
+                    },
+                    "price": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "price of the product"
+                    }
+                }
+            },
+            "purchaseOrder": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the purchaseOrder"
+                    },
+                    "requesterId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the requester"
+                    },
+                    "createdBy": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of PO creater"
+                    },
+                    "createdOn": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "date of PO create"
+                    },
+                    "updatedBy": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of updater"
+                    },
+                    "updatedOn": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "date of update"
+                    },
+                    "deliveryDate": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "date of update"
+                    },
+                    "status": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "status of PO"
+                    },
+                    "totalNumberOfProduct": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "status of PO"
+                    },
+                    "totalAmount": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "totalAmount of the PO"
+                    },
+                    "paymentTerm": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "paymentTerm of PO"
+                    },
+                    "shippingMethod": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "shippingMethod of PO"
+                    },
+                    "paymentWith": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "payment method of PO"
+                    },
+                    "shippingTerms": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "shippingTerms of PO"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "notes of PO"
+                    },
+                    "supplier": {
+                        "type": "object",
+                        "item": {
+                            "$ref": "#/components/schemas/supplier"
+                        }
+                    },
+                    "currency": {
+                        "type": "object",
+                        "item": {
+                            "$ref": "#/components/schemas/currency"
+                        }
+                    },
+                    "products": {
+                        "type": "array",
+                        "x-count": 2,
+                        "items": {
+                            "item": {
+                                "$ref": "#/components/schemas/product"
+                            },
+                            "quantity": {
+                                "type": "integer",
+                                "format": "int64",
+                                "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                "description": "quantity of item"
+                            }
+                        }
+                    }
+                }
+            },
+            "supplier": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the supplier"
+                    },
+                    "contact": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "contact of supplier"
+                    },
+                    "telephoneNo": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "telephoneNo of supplier"
+                    },
+                    "mailingAddress": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "mailingAddress of supplier"
+                    },
+                    "country": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "country of supplier"
+                    }
+                }
+            },
+            "currency": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the currency"
+                    },
+                    "name": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of currency"
+                    },
+                    "code": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "code of currency"
+                    },
+                    "countryName": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "countryName of currency"
+                    },
+                    "countryCode": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the currency"
+                    }
+                }
+            },
+            "invoice": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the invoice"
+                    },
+                    "purchaseOrderId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "purchase order id of the invoice"
+                    },
+                    "url": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "url of invoice"
+                    },
+                    "issueDate": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "issue Date of invoice"
+                    },
+                    "invoiceDueDate": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "invoice Due Date"
+                    },
+                    "amount": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "purchaseOrderId of the invoice"
+                    },
+                    "tax": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "tax details in invoice"
+                    },
+                    "currency": {
+                        "type": "object",
+                        "item": {
+                            "$ref": "#/components/schemas/currency"
+                        }
+                    }
+                }
+            },
+            "Error": {
+                "type": "object",
+                "required": [
+                    "code",
+                    "message"
+                ],
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "links": {},
+        "callbacks": {}
+    },
+    "securitySchemes": {
+        "BasicAuth": {
+            "type": "http",
+            "scheme": "basic"
+        }
+    },
+    "security": [
+        {
+            "BasicAuth": []
+        }
+    ]
+}

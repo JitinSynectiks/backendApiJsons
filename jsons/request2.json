@@ -1,0 +1,49 @@
+
+   
+    {
+        "requestId": 2,
+        "createdBy": "requester id",
+        "createdOn": "01-01-2022",
+        "updatedBy": "updater name",
+        "updatedOn": "01-01-2022",
+        "approvedBy": "approverId",
+        "approvedOn": "01-01-2022",
+        "dueDate": "01-01-2022",
+        "deliveryDate": "01-01-2022",
+        "location": "head office",
+        "requestType": "purchase",
+        "note": "this is note",
+        "state": "pending",
+        "progressStage": "new",
+        "totalAmount": 824,
+        "department": "development",
+        "document": [
+            {
+                "name": "name",
+                "url": "http://demo.com"
+            },
+            {
+                "name": "name",
+                "url": "http://demo.com"
+            },
+            {
+                "name": "name",
+                "url": "http://demo.com"
+            }
+        ],
+        "products": [
+            {
+                "item":{
+
+                    "productId": 1,
+                    "itemName": "mouse",
+                    "itemType": "product",
+                    "unit": "each",
+                    "category": "tech",
+                    "supplierId": 1,
+                    "price": 12
+                },
+                "quantity": 2,
+            }
+        ]
+    }

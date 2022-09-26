@@ -1,0 +1,29 @@
+[
+    {
+        "productId": 1,
+        "itemName": "mouse",
+        "price": 12,
+        "unit": "each",
+        "itemType": "product",
+        "category": "tech",
+        "supplierId": 1
+    },
+    {
+        "productId": 2,
+        "itemName": "hp laptop",
+        "itemType": "product",
+        "unit": "each",
+        "supplierId": 1,
+        "category": "tech",
+        "price": 800
+    },
+    {
+        "productId": 3,
+        "itemName": "mouse",
+        "itemType": "product",
+        "unit": "each",
+        "category": "tech",
+        "supplierId": 2,
+        "price": 12
+    }
+]

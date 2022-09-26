@@ -1,0 +1,16 @@
+[
+    {
+        "currencyId": 1,
+        "code": "USD",
+        "name": "doller",
+        "countryName": "USA",
+        "countryCode": 1
+    },
+    {
+        "currencyId": 2,
+        "code": "INR",
+        "name": "Rupee",
+        "countryName": "INDIA",
+        "countryCode": 91
+    }
+]

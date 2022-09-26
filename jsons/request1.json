@@ -1,0 +1,57 @@
+{
+    "requestId": 1,
+    "createdBy": "requester id",
+    "createdOn": "01-01-2022",
+    "updatedBy": "updater name",
+    "updatedOn": "01-01-2022",
+    "approvedBy": "approverId",
+    "approvedOn": "01-01-2022",
+    "desiredDate": "01-01-2022",
+    "location": "head office",
+    "requestType": "purchase",
+    "note": "This is note",
+    "state": "pending",
+    "progressStage": "new",
+    "totalAmount": 824,
+    "department": "development",
+    "document": [
+        {
+            "name": "name",
+            "url": ""
+        },
+        {
+            "name": "name",
+            "url": ""
+        },
+        {
+            "name": "name",
+            "url": ""
+        }
+    ],
+    "products": [
+        {
+            "item": {
+                "id": 3,
+                "itemName": "mouse",
+                "itemType": "product",
+                "unit": "each",
+                "category": "tech",
+                "supplierId": 2,
+                "price": 12
+            },
+            "quantity": 2
+        },
+        {
+            "item": {
+                "productId": 2,
+                "itemName": "hp laptop",
+                "itemType": "product",
+                "unit": "each",
+                "supplierId": 1,
+                "category": "tech",
+                "price": 800
+            },
+            "quantity": 1
+        }
+    ]
+}
