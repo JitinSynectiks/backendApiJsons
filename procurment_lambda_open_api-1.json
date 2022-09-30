@@ -239,7 +239,6 @@
                         }
                     }
                 },
-                
                 "responses": {
                     "200": {
                         "description": "Delete request is use for delete request by id",
@@ -264,6 +263,81 @@
                                         "message": {
                                             "type": "string",
                                             "default": "Delete request Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "request"
+                ],
+                "parameters": []
+            }
+        },
+        "/request/approve": {
+            "post": {
+                "summary": "approve request",
+                "operationId": "approveRequest",
+                "requestBody": {
+                    "description": "approve new request",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
+                                        "description":"id of request"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "approve request successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "approve request Successfully"
                                         },
                                         "type": {
                                             "type": "string",
@@ -1750,7 +1824,10 @@
                         "type": "array",
                         "x-count": 2,
                         "items": {
-                            "$ref": "#/components/schemas/product",
+                            "item": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/product"
+                            },
                             "quantity": {
                                 "type": "integer",
                                 "format": "int64",
@@ -1758,27 +1835,6 @@
                                 "description": "quantity of item"
                             }
                         }
-                    }
-                }
-            },
-            "document": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "integer",
-                        "format": "int64",
-                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "id of the document"
-                    },
-                    "name": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "name of document"
-                    },
-                    "url": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "url of document"
                     }
                 }
             },
@@ -1811,17 +1867,22 @@
                         "x-faker": "{{commerce.productName}}",
                         "description": "category of product"
                     },
-                    "supplierId": {
-                        "type": "integer",
-                        "format": "int64",
-                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "id of the supplier"
+                    "imgUrl": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "category of product"
                     },
                     "price": {
                         "type": "integer",
                         "format": "int64",
                         "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
                         "description": "price of the product"
+                    },
+                    "supplier": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/components/schemas/supplier"
+                        }
                     }
                 }
             },
@@ -1912,13 +1973,7 @@
                             "$ref": "#/components/schemas/supplier"
                         }
                     },
-                    "currency": {
-                        "type": "object",
-                        "item": {
-                            "$ref": "#/components/schemas/currency"
-                        }
-                    },
-                    "products": {
+                    "purchaseOrderProducts": {
                         "type": "array",
                         "x-count": 2,
                         "items": {
@@ -1944,6 +1999,16 @@
                         "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
                         "description": "id of the supplier"
                     },
+                    "name": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "name of supplier"
+                    },
+                    "email": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "email of supplier"
+                    },
                     "contact": {
                         "type": "string",
                         "x-faker": "{{commerce.productName}}",
@@ -1954,15 +2019,119 @@
                         "x-faker": "{{commerce.productName}}",
                         "description": "telephoneNo of supplier"
                     },
-                    "mailingAddress": {
+                    "designationNo": {
                         "type": "string",
                         "x-faker": "{{commerce.productName}}",
-                        "description": "mailingAddress of supplier"
+                        "description": "designationNo of supplier"
+                    },
+                    "automateSending": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "automateSending status of supplier"
+                    },
+                    "city": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "city status of supplier"
+                    },
+                    "state": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "state status of supplier"
+                    },
+                    "postalCode": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "postalCode status of supplier"
                     },
                     "country": {
                         "type": "string",
                         "x-faker": "{{commerce.productName}}",
-                        "description": "country of supplier"
+                        "description": "country status of supplier"
+                    },
+                    "category": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "category status of supplier"
+                    },
+                    "address": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "mailingAddress of supplier"
+                    },
+                    "status": {
+                        "type": "string",
+                        "x-faker": "{{commerce.productName}}",
+                        "description": "status of supplier"
+                    },
+                    "company": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of company"
+                            },
+                            "registrationNo": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "registrationNo of company"
+                            }
+                        }
+                    },
+                    "bankDetails": {
+                        "type": "object",
+                        "properties": {
+                            "accountHolderName": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "accountHolderName of supplier"
+                            },
+                            "accountNo": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "accountNo of supplier"
+                            },
+                            "bank": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "bank of supplier"
+                            },
+                            "taxId": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "taxId of supplier"
+                            },
+                            "currency": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/currency"
+                            }
+                        }
+                    },
+                    "document": {
+                        "type": "array",
+                        "x-count": 2,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "format": "int64",
+                                    "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                    "description": "id of the document"
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "x-faker": "{{commerce.productName}}",
+                                    "description": "name of document"
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "x-faker": "{{commerce.productName}}",
+                                    "description": "url of document"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -2007,11 +2176,9 @@
                         "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
                         "description": "id of the invoice"
                     },
-                    "purchaseOrderId": {
-                        "type": "integer",
-                        "format": "int64",
-                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "purchase order id of the invoice"
+                    "purchaseOrder": {
+                        "type": "object",
+                        "$ref": "#/components/schemas/purchaseOrder"
                     },
                     "url": {
                         "type": "string",
@@ -2032,7 +2199,7 @@
                         "type": "integer",
                         "format": "int64",
                         "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "purchaseOrderId of the invoice"
+                        "description": "id of the invoice"
                     },
                     "tax": {
                         "type": "string",
