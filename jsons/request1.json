@@ -1,151 +1,153 @@
 {
-    "requestId": 1,
-    "createdBy": "requester id",
-    "createdOn": "01-01-2022",
-    "updatedBy": "updater name",
-    "updatedOn": "01-01-2022",
-    "approvedBy": "approverId",
-    "approvedOn": "01-01-2022",
-    "desiredDate": "01-01-2022",
-    "location": "head office",
-    "requestType": "purchase",
-    "note": "This is note",
-    "state": "pending",
-    "progressStage": "new",
-    "totalAmount": 824,
-    "department": "development",
-    "document": [
-        {
-            "name": "name",
-            "url": ""
-        },
-        {
-            "name": "name",
-            "url": ""
-        },
-        {
-            "name": "name",
-            "url": ""
-        }
-    ],
-    "products": [
-        {
-            "item": {
-                "id": 3,
-                "itemName": "mouse",
-                "itemType": "product",
-                "unit": "each",
-                "category": "tech",
-                "price": 12,
-                "supplier": {
+    "id": 1,
+    "details": {
+        "createdBy": "requester id",
+        "createdOn": "01-01-2022",
+        "updatedBy": "updater name",
+        "updatedOn": "01-01-2022",
+        "approvedBy": "approverId",
+        "approvedOn": "01-01-2022",
+        "desiredDate": "01-01-2022",
+        "location": "head office",
+        "requestType": "purchase",
+        "note": "This is note",
+        "state": "pending",
+        "progressStage": "new",
+        "totalAmount": 824,
+        "department": "development",
+        "document": [
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            }
+        ],
+        "products": [
+            {
+                "item": {
+                    "id": 3,
+                    "itemName": "mouse",
+                    "itemType": "product",
+                    "unit": "each",
+                    "category": "tech",
+                    "price": 12,
+                    "supplier": {
+                        "id": 2,
+                        "name": "raghav das",
+                        "email": "this@gmail.com",
+                        "contact": "+91 9876543210",
+                        "telephoneNo": "012-65432",
+                        "designationNo": "1233",
+                        "automateSending": "true",
+                        "city": "jaipur",
+                        "state": "rajasthan",
+                        "postalCode": "13468",
+                        "country": "USA",
+                        "paymentTerms": "terms",
+                        "category": "cat",
+                        "address": "Street no. B6, Miami",
+                        "status": "active",
+                        "company": {
+                            "name": "flipkart",
+                            "registrationNo": "123"
+                        },
+                        "bankDetails": {
+                            "accountHolderName": "jitin",
+                            "accountNo": "1234565789",
+                            "bank": "ABCD",
+                            "taxId": "DFS55465dFS",
+                            "currency": {
+                                "id": 1,
+                                "code": "USD",
+                                "name": "doller",
+                                "countryName": "USA",
+                                "countryCode": 1
+                            }
+                        },
+                        "document": [
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            }
+                        ]
+                    }
+                },
+                "quantity": 1
+            },
+            {
+                "item": {
                     "id": 2,
-                    "name": "raghav das",
-                    "email": "this@gmail.com",
-                    "contact": "+91 9876543210",
-                    "telephoneNo": "012-65432",
-                    "designationNo": "1233",
-                    "automateSending": "true",
-                    "city": "jaipur",
-                    "state": "rajasthan",
-                    "postalCode": "13468",
-                    "country": "USA",
-                    "paymentTerms": "terms",
-                    "category": "cat",
-                    "address": "Street no. B6, Miami",
-                    "status": "active",
-                    "company": {
-                        "name": "flipkart",
-                        "registrationNo": "123"
-                    },
-                    "bankDetails": {
-                        "accountHolderName": "jitin",
-                        "accountNo": "1234565789",
-                        "bank": "ABCD",
-                        "taxId": "DFS55465dFS",
-                        "currency": {
-                            "id": 1,
-                            "code": "USD",
-                            "name": "doller",
-                            "countryName": "USA",
-                            "countryCode": 1
-                        }
-                    },
-                    "document": [
-                        {
-                            "name": "name",
-                            "url": ""
+                    "itemName": "hp laptop",
+                    "itemType": "product",
+                    "unit": "each",
+                    "category": "tech",
+                    "price": 800,
+                    "supplier": {
+                        "id": 1,
+                        "name": "andrew choudhary",
+                        "email": "this@gmail.com",
+                        "contact": "+91 9876543210",
+                        "telephoneNo": "012-65432",
+                        "designationNo": "1233",
+                        "automateSending": "true",
+                        "city": "jaipur",
+                        "state": "rajasthan",
+                        "postalCode": "13468",
+                        "country": "USA",
+                        "paymentTerms": "terms",
+                        "category": "cat",
+                        "address": "Street no. B6, Miami",
+                        "status": "active",
+                        "company": {
+                            "name": "amazone",
+                            "registrationNo": "123"
                         },
-                        {
-                            "name": "name",
-                            "url": ""
+                        "bankDetails": {
+                            "accountHolderName": "jitin",
+                            "accountNo": "1234565789",
+                            "bank": "ABCD",
+                            "taxId": "DFS55465dFS",
+                            "currency": {
+                                "id": 1,
+                                "code": "USD",
+                                "name": "doller",
+                                "countryName": "USA",
+                                "countryCode": 1
+                            }
                         },
-                        {
-                            "name": "name",
-                            "url": ""
-                        }
-                    ]
-                }
-            },
-            "quantity": 1
-        },
-        {
-            "item": {
-                "id": 2,
-                "itemName": "hp laptop",
-                "itemType": "product",
-                "unit": "each",
-                "category": "tech",
-                "price": 800,
-                "supplier": {
-                    "id": 1,
-                    "name": "andrew choudhary",
-                    "email": "this@gmail.com",
-                    "contact": "+91 9876543210",
-                    "telephoneNo": "012-65432",
-                    "designationNo": "1233",
-                    "automateSending": "true",
-                    "city": "jaipur",
-                    "state": "rajasthan",
-                    "postalCode": "13468",
-                    "country": "USA",
-                    "paymentTerms": "terms",
-                    "category": "cat",
-                    "address": "Street no. B6, Miami",
-                    "status": "active",
-                    "company": {
-                        "name": "amazone",
-                        "registrationNo": "123"
-                    },
-                    "bankDetails": {
-                        "accountHolderName": "jitin",
-                        "accountNo": "1234565789",
-                        "bank": "ABCD",
-                        "taxId": "DFS55465dFS",
-                        "currency": {
-                            "id": 1,
-                            "code": "USD",
-                            "name": "doller",
-                            "countryName": "USA",
-                            "countryCode": 1
-                        }
-                    },
-                    "document": [
-                        {
-                            "name": "name",
-                            "url": ""
-                        },
-                        {
-                            "name": "name",
-                            "url": ""
-                        },
-                        {
-                            "name": "name",
-                            "url": ""
-                        }
-                    ]
-                }
-            },
-            "quantity": 1
-        }
-    ]
+                        "document": [
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            }
+                        ]
+                    }
+                },
+                "quantity": 1
+            }
+        ]
+    }
 }

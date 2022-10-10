@@ -1,107 +1,109 @@
 {
     "id": 1,
-    "requesterId": 1,
-    "fromDate": "01-01-2022",
-    "toDate": "02-01-2022",
-    "createdOn": "03-01-2022",
-    "updatedOn": "05-01-2022",
-    "createdBy": "Creater Name",
-    "updatedBy": "Updater Name",
-    "deliveryDate": "10-01-2022",
-    "status": "Pending | Unpaid | Undelivered | Delivered",
-    "totalNumberOfProduct": "3",
-    "totalAmount": 824,
-    "paymentTerm": "30 Net",
-    "shippingMethod": "Store Pickup",
-    "paymentWith": "Credit card",
-    "shippingTerms": "FOB",
-    "notes": "this is notes for Purchase Order",
-    "supplier": {
-        "id": 1,
-        "name": "andrew choudhary",
-        "email": "this@gmail.com",
-        "contact": "+91 9876543210",
-        "telephoneNo": "012-65432",
-        "designationNo": "1233",
-        "automateSending": "true",
-        "city": "jaipur",
-        "state": "rajasthan",
-        "postalCode": "13468",
-        "country": "USA",
-        "paymentTerms": "terms",
-        "category": "cat",
-        "address": "Street no. B6, Miami",
-        "status": "active",
-        "company": {
-            "name": "amazone",
-            "registrationNo": "123"
+    "details": {
+        "requesterId": 1,
+        "fromDate": "01-01-2022",
+        "toDate": "02-01-2022",
+        "createdOn": "03-01-2022",
+        "updatedOn": "05-01-2022",
+        "createdBy": "Creater Name",
+        "updatedBy": "Updater Name",
+        "deliveryDate": "10-01-2022",
+        "status": "Pending | Unpaid | Undelivered | Delivered",
+        "totalNumberOfProduct": "3",
+        "totalAmount": 824,
+        "paymentTerm": "30 Net",
+        "shippingMethod": "Store Pickup",
+        "paymentWith": "Credit card",
+        "shippingTerms": "FOB",
+        "notes": "this is notes for Purchase Order",
+        "supplier": {
+            "id": 1,
+            "name": "andrew choudhary",
+            "email": "this@gmail.com",
+            "contact": "+91 9876543210",
+            "telephoneNo": "012-65432",
+            "designationNo": "1233",
+            "automateSending": "true",
+            "city": "jaipur",
+            "state": "rajasthan",
+            "postalCode": "13468",
+            "country": "USA",
+            "paymentTerms": "terms",
+            "category": "cat",
+            "address": "Street no. B6, Miami",
+            "status": "active",
+            "company": {
+                "name": "amazone",
+                "registrationNo": "123"
+            },
+            "bankDetails": {
+                "accountHolderName": "jitin",
+                "accountNo": "1234565789",
+                "bank": "ABCD",
+                "taxId": "DFS55465dFS",
+                "currency": {
+                    "id": 1,
+                    "code": "USD",
+                    "name": "doller",
+                    "countryName": "USA",
+                    "countryCode": 1
+                }
+            },
+            "document": [
+                {
+                    "name": "name",
+                    "url": ""
+                },
+                {
+                    "name": "name",
+                    "url": ""
+                },
+                {
+                    "name": "name",
+                    "url": ""
+                }
+            ]
         },
-        "bankDetails": {
-            "accountHolderName": "jitin",
-            "accountNo": "1234565789",
-            "bank": "ABCD",
-            "taxId": "DFS55465dFS",
-            "currency": {
-                "id": 1,
-                "code": "USD",
-                "name": "doller",
-                "countryName": "USA",
-                "countryCode": 1
+        "requestsDetail": [
+            {
+                "requestId": 1,
+                "ids": [
+                    2
+                ]
+            },
+            {
+                "requestId": 2,
+                "ids": [
+                    1
+                ]
             }
-        },
-        "document": [
+        ],
+        "purchaseOrderProducts": [
             {
-                "name": "name",
-                "url": ""
+                "item": {
+                    "id": 2,
+                    "itemName": "hp laptop",
+                    "itemType": "product",
+                    "unit": "each",
+                    "supplier": "amazone",
+                    "category": "tech",
+                    "price": 800
+                },
+                "quantity": 1
             },
             {
-                "name": "name",
-                "url": ""
-            },
-            {
-                "name": "name",
-                "url": ""
+                "item": {
+                    "id": 1,
+                    "itemName": "mouse",
+                    "itemType": "product",
+                    "unit": "each",
+                    "category": "tech",
+                    "supplier": "amazone",
+                    "price": 12
+                },
+                "quantity": 2
             }
         ]
-    },
-    "requestsDetail": [
-        {
-            "requestId": 1,
-            "ids": [
-                2
-            ]
-        },
-        {
-            "requestId": 2,
-            "ids": [
-                1
-            ]
-        }
-    ],
-    "purchaseOrderProducts": [
-        {
-            "item": {
-                "id": 2,
-                "itemName": "hp laptop",
-                "itemType": "product",
-                "unit": "each",
-                "supplier": "amazone",
-                "category": "tech",
-                "price": 800
-            },
-            "quantity": 1
-        },
-        {
-            "item": {
-                "id": 1,
-                "itemName": "mouse",
-                "itemType": "product",
-                "unit": "each",
-                "category": "tech",
-                "supplier": "amazone",
-                "price": 12
-            },
-            "quantity": 2
-        }
-    ]
+    }
 }

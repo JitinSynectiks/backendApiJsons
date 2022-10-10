@@ -159,10 +159,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "type": "object",
-                                "items": {
-                                    "$ref": "#/components/schemas/request"
-                                }
+                                "$ref": "#/components/schemas/request"
                             }
                         }
                     }
@@ -1723,117 +1720,122 @@
                         "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
                         "description": "id of the Requisition"
                     },
-                    "createdBy": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "name of requester"
-                    },
-                    "createdOn": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "date of request"
-                    },
-                    "updatedBy": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "name of updater"
-                    },
-                    "updatedOn": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "date of update"
-                    },
-                    "approvedBy": {
-                        "type": "integer",
-                        "format": "int64",
-                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "id of the approver"
-                    },
-                    "approvedOn": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "date of approval"
-                    },
-                    "desiredDate": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "desired delivery date by requester"
-                    },
-                    "location": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "location of requester"
-                    },
-                    "requestType": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "type of request"
-                    },
-                    "note": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "note related to request"
-                    },
-                    "state": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "state of request"
-                    },
-                    "progressStage": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "progress stage of request"
-                    },
-                    "totalAmount": {
-                        "type": "integer",
-                        "format": "int64",
-                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "total amount of request"
-                    },
-                    "department": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "department of requester"
-                    },
-                    "document": {
-                        "type": "array",
-                        "x-count": 2,
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "id": {
-                                    "type": "integer",
-                                    "format": "int64",
-                                    "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                                    "description": "id of the document"
-                                },
-                                "name": {
-                                    "type": "string",
-                                    "x-faker": "{{commerce.productName}}",
-                                    "description": "name of document"
-                                },
-                                "url": {
-                                    "type": "string",
-                                    "x-faker": "{{commerce.productName}}",
-                                    "description": "url of document"
+                    "details": {
+                        "type": "object",
+                        "properties": {
+                            "createdBy": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of requester"
+                            },
+                            "createdOn": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "date of request"
+                            },
+                            "updatedBy": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of updater"
+                            },
+                            "updatedOn": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "date of update"
+                            },
+                            "approvedBy": {
+                                "type": "integer",
+                                "format": "int64",
+                                "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                "description": "id of the approver"
+                            },
+                            "approvedOn": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "date of approval"
+                            },
+                            "desiredDate": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "desired delivery date by requester"
+                            },
+                            "location": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "location of requester"
+                            },
+                            "requestType": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "type of request"
+                            },
+                            "note": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "note related to request"
+                            },
+                            "state": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "state of request"
+                            },
+                            "progressStage": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "progress stage of request"
+                            },
+                            "totalAmount": {
+                                "type": "integer",
+                                "format": "int64",
+                                "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                "description": "total amount of request"
+                            },
+                            "department": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "department of requester"
+                            },
+                            "document": {
+                                "type": "array",
+                                "x-count": 2,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                            "description": "id of the document"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "x-faker": "{{commerce.productName}}",
+                                            "description": "name of document"
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "x-faker": "{{commerce.productName}}",
+                                            "description": "url of document"
+                                        }
+                                    }
                                 }
-                            }
-                        }
-                    },
-                    "products": {
-                        "type": "array",
-                        "x-count": 2,
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "item": {
-                                    "$ref": "#/components/schemas/product"
-                                },
-                                "quantity": {
-                                    "type": "integer",
-                                    "format": "int64",
-                                    "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                                    "description": "quantity of item"
+                            },
+                            "products": {
+                                "type": "array",
+                                "x-count": 2,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "item": {
+                                            "$ref": "#/components/schemas/product"
+                                        },
+                                        "quantity": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                            "description": "quantity of item"
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1881,9 +1883,7 @@
                         "description": "price of the product"
                     },
                     "supplier": {
-                      
-                            "$ref": "#/components/schemas/supplier"
-                        
+                        "$ref": "#/components/schemas/supplier"
                     }
                 }
             },
@@ -1896,96 +1896,101 @@
                         "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
                         "description": "id of the purchaseOrder"
                     },
-                    "requesterId": {
-                        "type": "integer",
-                        "format": "int64",
-                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "id of the requester"
-                    },
-                    "createdBy": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "name of PO creater"
-                    },
-                    "createdOn": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "date of PO create"
-                    },
-                    "updatedBy": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "name of updater"
-                    },
-                    "updatedOn": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "date of update"
-                    },
-                    "deliveryDate": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "date of update"
-                    },
-                    "status": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "status of PO"
-                    },
-                    "totalNumberOfProduct": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "status of PO"
-                    },
-                    "totalAmount": {
-                        "type": "integer",
-                        "format": "int64",
-                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                        "description": "totalAmount of the PO"
-                    },
-                    "paymentTerm": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "paymentTerm of PO"
-                    },
-                    "shippingMethod": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "shippingMethod of PO"
-                    },
-                    "paymentWith": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "payment method of PO"
-                    },
-                    "shippingTerms": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "shippingTerms of PO"
-                    },
-                    "notes": {
-                        "type": "string",
-                        "x-faker": "{{commerce.productName}}",
-                        "description": "notes of PO"
-                    },
-                    "supplier": {
+                    "details": {
                         "type": "object",
-                        "item": {
-                            "$ref": "#/components/schemas/supplier"
-                        }
-                    },
-                    "purchaseOrderProducts": {
-                        "type": "array",
-                        "x-count": 2,
-                        "items": {
-                            "item": {
-                                "$ref": "#/components/schemas/product"
-                            },
-                            "quantity": {
+                        "properties": {
+                            "requesterId": {
                                 "type": "integer",
                                 "format": "int64",
                                 "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                                "description": "quantity of item"
+                                "description": "id of the requester"
+                            },
+                            "createdBy": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of PO creater"
+                            },
+                            "createdOn": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "date of PO create"
+                            },
+                            "updatedBy": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of updater"
+                            },
+                            "updatedOn": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "date of update"
+                            },
+                            "deliveryDate": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "date of update"
+                            },
+                            "status": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "status of PO"
+                            },
+                            "totalNumberOfProduct": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "status of PO"
+                            },
+                            "totalAmount": {
+                                "type": "integer",
+                                "format": "int64",
+                                "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                "description": "totalAmount of the PO"
+                            },
+                            "paymentTerm": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "paymentTerm of PO"
+                            },
+                            "shippingMethod": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "shippingMethod of PO"
+                            },
+                            "paymentWith": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "payment method of PO"
+                            },
+                            "shippingTerms": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "shippingTerms of PO"
+                            },
+                            "notes": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "notes of PO"
+                            },
+                            "supplier": {
+                                "type": "object",
+                                "item": {
+                                    "$ref": "#/components/schemas/supplier"
+                                }
+                            },
+                            "purchaseOrderProducts": {
+                                "type": "array",
+                                "x-count": 2,
+                                "items": {
+                                    "item": {
+                                        "$ref": "#/components/schemas/product"
+                                    },
+                                    "quantity": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                        "description": "quantity of item"
+                                    }
+                                }
                             }
                         }
                     }
