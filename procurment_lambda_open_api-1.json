@@ -307,7 +307,7 @@
                                         "type": "integer",
                                         "format": "int64",
                                         "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
-                                        "description":"id of request"
+                                        "description": "id of request"
                                     }
                                 }
                             }
@@ -1824,15 +1824,17 @@
                         "type": "array",
                         "x-count": 2,
                         "items": {
-                            "item": {
-                                "type": "object",
-                                "$ref": "#/components/schemas/product"
-                            },
-                            "quantity": {
-                                "type": "integer",
-                                "format": "int64",
-                                "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
-                                "description": "quantity of item"
+                            "type": "object",
+                            "properties": {
+                                "item": {
+                                    "$ref": "#/components/schemas/product"
+                                },
+                                "quantity": {
+                                    "type": "integer",
+                                    "format": "int64",
+                                    "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                    "description": "quantity of item"
+                                }
                             }
                         }
                     }
@@ -1879,10 +1881,9 @@
                         "description": "price of the product"
                     },
                     "supplier": {
-                        "type": "object",
-                        "items": {
+                      
                             "$ref": "#/components/schemas/supplier"
-                        }
+                        
                     }
                 }
             },
