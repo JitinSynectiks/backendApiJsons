@@ -224,7 +224,7 @@ PurchseOrder | /purchase_order| GET, POST, PUT, DELETE
 ```
   
 
-## **Requisitions**
+## **Request**
     End Points
         POST /request
         PUT  /request
