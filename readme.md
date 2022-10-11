@@ -53,7 +53,7 @@ invalid_request_error |	Invalid request errors arise when your request has inval
 
 ## Entity list 
 -->brief-intro
-<div style="background:linear-gradient(#00ccfdfc, #3f51b5);color:white">
+
 
 Entity Name | Endpoint | Methods
 ------------|----------|---------
@@ -64,7 +64,6 @@ Currency | /currency| GET, POST, PUT, DELETE
 Invoice | /invoice| GET, POST, PUT, DELETE
 PurchseOrder | /purchase_order| GET, POST, PUT, DELETE
 
-</div>
 ## **Request-Entity**
 
 ```json
