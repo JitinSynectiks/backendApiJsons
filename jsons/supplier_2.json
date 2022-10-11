@@ -1,0 +1,50 @@
+{
+    "id": 2,
+    "details": {
+        "name": "raghav das",
+        "email": "this@gmail.com",
+        "contact": "+91 9876543210",
+        "telephoneNo": "012-65432",
+        "designationNo": "1233",
+        "automateSending": "true",
+        "city": "jaipur",
+        "state": "rajasthan",
+        "postalCode": "13468",
+        "country": "USA",
+        "paymentTerms": "terms",
+        "category": "cat",
+        "address": "Street no. B6, Miami",
+        "status": "active",
+        "company": {
+            "name": "flipkart",
+            "registrationNo": "123"
+        },
+        "bankDetails": {
+            "accountHolderName": "jitin",
+            "accountNo": "1234565789",
+            "bank": "ABCD",
+            "taxId": "DFS55465dFS",
+            "currency": {
+                "id": 1,
+                "code": "USD",
+                "name": "doller",
+                "countryName": "USA",
+                "countryCode": 1
+            }
+        },
+        "document": [
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            }
+        ]
+    }
+}

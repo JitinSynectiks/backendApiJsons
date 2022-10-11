@@ -1,0 +1,9 @@
+{
+    "id": 1,
+    "details": {
+        "code": "USD",
+        "name": "doller",
+        "countryName": "USA",
+        "countryCode": 1
+    }
+}

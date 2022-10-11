@@ -1,0 +1,9 @@
+{
+    "id": 2,
+    "details": {
+        "code": "INR",
+        "name": "Rupee",
+        "countryName": "INDIA",
+        "countryCode": 91
+    }
+}

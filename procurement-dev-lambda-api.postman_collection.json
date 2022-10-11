@@ -1,0 +1,826 @@
+{
+	"info": {
+		"_postman_id": "642fc86c-560a-4c99-b516-846bd513f778",
+		"name": "procurement-dev-lambda-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18684798"
+	},
+	"item": [
+		{
+			"name": "Request",
+			"item": [
+				{
+					"name": "addRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"Jitin\",\r\n    \"createdOn\": \"01-01-2022\",\r\n    \"updatedBy\": \"updater name\",\r\n    \"updatedOn\": \"01-01-2022\",\r\n    \"approvedBy\": \"approverId\",\r\n    \"approvedOn\": \"01-01-2022\",\r\n    \"desiredDate\": \"01-01-2022\",\r\n    \"location\": \"head office\",\r\n    \"requestType\": \"purchase\",\r\n    \"note\": \"mohit\",\r\n    \"state\": \"pending\",\r\n    \"progressStage\": \"new\",\r\n    \"totalAmount\": 824,\r\n    \"department\": \"development\",\r\n    \"document\": [\r\n        {\r\n            \"name\": \"name\",\r\n            \"url\": \"\"\r\n        },\r\n        {\r\n            \"name\": \"name\",\r\n            \"url\": \"\"\r\n        },\r\n        {\r\n            \"name\": \"name\",\r\n            \"url\": \"\"\r\n        }\r\n    ],\r\n    \"products\": [\r\n        {\r\n            \"item\": {\r\n                \"id\": 3,\r\n                \"itemName\": \"mouse\",\r\n                \"itemType\": \"product\",\r\n                \"unit\": \"each\",\r\n                \"category\": \"tech\",\r\n                \"price\": 12,\r\n                \"supplier\": {\r\n                    \"id\": 2,\r\n                    \"name\": \"raghav das\",\r\n                    \"email\": \"this@gmail.com\",\r\n                    \"contact\": \"+91 9876543210\",\r\n                    \"telephoneNo\": \"012-65432\",\r\n                    \"designationNo\": \"1233\",\r\n                    \"automateSending\": \"true\",\r\n                    \"city\": \"jaipur\",\r\n                    \"state\": \"rajasthan\",\r\n                    \"postalCode\": \"13468\",\r\n                    \"country\": \"USA\",\r\n                    \"paymentTerms\": \"terms\",\r\n                    \"category\": \"cat\",\r\n                    \"address\": \"Street no. B6, Miami\",\r\n                    \"status\": \"active\",\r\n                    \"company\": {\r\n                        \"name\": \"flipkart\",\r\n                        \"registrationNo\": \"123\"\r\n                    },\r\n                    \"bankDetails\": {\r\n                        \"accountHolderName\": \"jitin\",\r\n                        \"accountNo\": \"1234565789\",\r\n                        \"bank\": \"ABCD\",\r\n                        \"taxId\": \"DFS55465dFS\",\r\n                        \"currency\": {\r\n                            \"id\": 1,\r\n                            \"code\": \"USD\",\r\n                            \"name\": \"doller\",\r\n                            \"countryName\": \"USA\",\r\n                            \"countryCode\": 1\r\n                        }\r\n                    },\r\n                    \"document\": [\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        }\r\n                    ]\r\n                }\r\n            },\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"item\": {\r\n                \"id\": 2,\r\n                \"itemName\": \"hp laptop\",\r\n                \"itemType\": \"product\",\r\n                \"unit\": \"each\",\r\n                \"category\": \"tech\",\r\n                \"price\": 800,\r\n                \"supplier\": {\r\n                    \"id\": 1,\r\n                    \"name\": \"andrew choudhary\",\r\n                    \"email\": \"this@gmail.com\",\r\n                    \"contact\": \"+91 9876543210\",\r\n                    \"telephoneNo\": \"012-65432\",\r\n                    \"designationNo\": \"1233\",\r\n                    \"automateSending\": \"true\",\r\n                    \"city\": \"jaipur\",\r\n                    \"state\": \"rajasthan\",\r\n                    \"postalCode\": \"13468\",\r\n                    \"country\": \"USA\",\r\n                    \"paymentTerms\": \"terms\",\r\n                    \"category\": \"cat\",\r\n                    \"address\": \"Street no. B6, Miami\",\r\n                    \"status\": \"active\",\r\n                    \"company\": {\r\n                        \"name\": \"amazone\",\r\n                        \"registrationNo\": \"123\"\r\n                    },\r\n                    \"bankDetails\": {\r\n                        \"accountHolderName\": \"jitin\",\r\n                        \"accountNo\": \"1234565789\",\r\n                        \"bank\": \"ABCD\",\r\n                        \"taxId\": \"DFS55465dFS\",\r\n                        \"currency\": {\r\n                            \"id\": 1,\r\n                            \"code\": \"USD\",\r\n                            \"name\": \"doller\",\r\n                            \"countryName\": \"USA\",\r\n                            \"countryCode\": 1\r\n                        }\r\n                    },\r\n                    \"document\": [\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        }\r\n                    ]\r\n                }\r\n            },\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRequest",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 33\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchRequest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"state\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRequest",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 3454,\r\n  \"details\": {\r\n    \"note\": \"Taaaaaaaaaa\",\r\n    \"state\": \"aaaaaaaaaaa\",\r\n    \"document\": [\r\n      {\r\n        \"url\": \"\",\r\n        \"name\": \"aaaaaaaaaaa\"\r\n      },\r\n      {\r\n        \"url\": \"\",\r\n        \"name\": \"aaaaaaaa\"\r\n      },\r\n      {\r\n        \"url\": \"\",\r\n        \"name\": \"name\"\r\n      }\r\n    ],\r\n    \"location\": \"aaaaaa\",\r\n    \"products\": [\r\n      {\r\n        \"item\": {\r\n          \"id\": 3,\r\n          \"unit\": \"each\",\r\n          \"price\": 12,\r\n          \"category\": \"tech\",\r\n          \"itemName\": \"mouse\",\r\n          \"itemType\": \"product\",\r\n          \"supplier\": {\r\n            \"id\": 2,\r\n            \"city\": \"jaipur\",\r\n            \"name\": \"raghav das\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"state\": \"rajasthan\",\r\n            \"status\": \"active\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"company\": {\r\n              \"name\": \"flipkart\",\r\n              \"registrationNo\": \"123\"\r\n            },\r\n            \"contact\": \"+91 9876543210\",\r\n            \"country\": \"USA\",\r\n            \"category\": \"cat\",\r\n            \"document\": [\r\n              {\r\n                \"url\": \"\",\r\n                \"name\": \"name\"\r\n              },\r\n              {\r\n                \"url\": \"\",\r\n                \"name\": \"name\"\r\n              },\r\n              {\r\n                \"url\": \"\",\r\n                \"name\": \"name\"\r\n              }\r\n            ],\r\n            \"postalCode\": \"13468\",\r\n            \"bankDetails\": {\r\n              \"bank\": \"ABCD\",\r\n              \"taxId\": \"DFS55465dFS\",\r\n              \"currency\": {\r\n                \"id\": 1,\r\n                \"code\": \"USD\",\r\n                \"name\": \"doller\",\r\n                \"countryCode\": 1,\r\n                \"countryName\": \"USA\"\r\n              },\r\n              \"accountNo\": \"1234565789\",\r\n              \"accountHolderName\": \"jitin\"\r\n            },\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\"\r\n          }\r\n        },\r\n        \"quantity\": 1\r\n      },\r\n      {\r\n        \"item\": {\r\n          \"id\": 2,\r\n          \"unit\": \"each\",\r\n          \"price\": 800,\r\n          \"category\": \"tech\",\r\n          \"itemName\": \"hp laptop\",\r\n          \"itemType\": \"product\",\r\n          \"supplier\": {\r\n            \"id\": 1,\r\n            \"city\": \"jaipur\",\r\n            \"name\": \"andrew choudhary\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"state\": \"rajasthan\",\r\n            \"status\": \"active\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"company\": {\r\n              \"name\": \"amazone\",\r\n              \"registrationNo\": \"123\"\r\n            },\r\n            \"contact\": \"+91 9876543210\",\r\n            \"country\": \"USA\",\r\n            \"category\": \"cat\",\r\n            \"document\": [\r\n              {\r\n                \"url\": \"\",\r\n                \"name\": \"name\"\r\n              },\r\n              {\r\n                \"url\": \"\",\r\n                \"name\": \"name\"\r\n              },\r\n              {\r\n                \"url\": \"\",\r\n                \"name\": \"name\"\r\n              }\r\n            ],\r\n            \"postalCode\": \"13468\",\r\n            \"bankDetails\": {\r\n              \"bank\": \"ABCD\",\r\n              \"taxId\": \"DFS55465dFS\",\r\n              \"currency\": {\r\n                \"id\": 1,\r\n                \"code\": \"USD\",\r\n                \"name\": \"doller\",\r\n                \"countryCode\": 1,\r\n                \"countryName\": \"USA\"\r\n              },\r\n              \"accountNo\": \"1234565789\",\r\n              \"accountHolderName\": \"jitin\"\r\n            },\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\"\r\n          }\r\n        },\r\n        \"quantity\": 1\r\n      }\r\n    ],\r\n    \"createdBy\": \"requester id\",\r\n    \"createdOn\": \"01-01-2022\",\r\n    \"requestId\": 1,\r\n    \"updatedBy\": \"updater name\",\r\n    \"updatedOn\": \"01-01-2022\",\r\n    \"approvedBy\": \"approverId\",\r\n    \"approvedOn\": \"01-01-2022\",\r\n    \"department\": \"development\",\r\n    \"desiredDate\": \"01-01-2022\",\r\n    \"requestType\": \"purchase\",\r\n    \"totalAmount\": 824,\r\n    \"progressStage\": \"new\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"request"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"itemName\": \"hp laptop\",\r\n        \"itemType\": \"product\",\r\n        \"unit\": \"each\",\r\n        \"category\": \"tech\",\r\n        \"price\": 800,\r\n        \"imgUrl\": \"http://imgSynectiks.com\",\r\n        \"supplier\": {\r\n            \"id\": 1,\r\n            \"name\": \"andrew choudhary\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"contact\": \"+91 9876543210\",\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\",\r\n            \"city\": \"jaipur\",\r\n            \"state\": \"rajasthan\",\r\n            \"postalCode\": \"13468\",\r\n            \"country\": \"USA\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"category\": \"cat\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"status\": \"active\",\r\n            \"company\": {\r\n                \"name\": \"amazone\",\r\n                \"registrationNo\": \"123\"\r\n            },\r\n            \"bankDetails\": {\r\n                \"accountHolderName\": \"jitin\",\r\n                \"accountNo\": \"1234565789\",\r\n                \"bank\": \"ABCD\",\r\n                \"taxId\": \"DFS55465dFS\",\r\n                \"currency\": {\r\n                    \"id\": 1,\r\n                    \"code\": \"USD\",\r\n                    \"name\": \"doller\",\r\n                    \"countryName\": \"USA\",\r\n                    \"countryCode\": 1\r\n                }\r\n            },\r\n            \"document\": [\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/product",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/product",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchProduct",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uhnit\": \"every\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/product",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"details\": {\r\n        \"itemName\": \"hp laptop\",\r\n        \"itemType\": \"product\",\r\n        \"unit\": \"every\",\r\n        \"category\": \"tech\",\r\n        \"price\": 800,\r\n        \"imgUrl\": \"http://imgSynectiks.com\",\r\n        \"supplier\": {\r\n            \"id\": 1,\r\n            \"name\": \"andrew choudhary\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"contact\": \"+91 9876543210\",\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\",\r\n            \"city\": \"jaipur\",\r\n            \"state\": \"rajasthan\",\r\n            \"postalCode\": \"13468\",\r\n            \"country\": \"USA\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"category\": \"cat\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"status\": \"active\",\r\n            \"company\": {\r\n                \"name\": \"amazone\",\r\n                \"registrationNo\": \"123\"\r\n            },\r\n            \"bankDetails\": {\r\n                \"accountHolderName\": \"jitin\",\r\n                \"accountNo\": \"1234565789\",\r\n                \"bank\": \"ABCD\",\r\n                \"taxId\": \"DFS55465dFS\",\r\n                \"currency\": {\r\n                    \"id\": 1,\r\n                    \"code\": \"USD\",\r\n                    \"name\": \"doller\",\r\n                    \"countryName\": \"USA\",\r\n                    \"countryCode\": 1\r\n                }\r\n            },\r\n            \"document\": [\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/product",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "addSupplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"raghav das\",\r\n        \"email\": \"this@gmail.com\",\r\n        \"contact\": \"+91 9876543210\",\r\n        \"telephoneNo\": \"012-65432\",\r\n        \"designationNo\": \"1233\",\r\n        \"automateSending\": \"true\",\r\n        \"city\": \"jaipur\",\r\n        \"state\": \"rajasthan\",\r\n        \"postalCode\": \"13468\",\r\n        \"country\": \"USA\",\r\n        \"paymentTerms\": \"terms\",\r\n        \"category\": \"cat\",\r\n        \"address\": \"Street no. B6, Miami\",\r\n        \"status\": \"active\",\r\n        \"company\": {\r\n            \"name\": \"flipkart\",\r\n            \"registrationNo\": \"123\"\r\n        },\r\n        \"bankDetails\": {\r\n            \"accountHolderName\": \"jitin\",\r\n            \"accountNo\": \"1234565789\",\r\n            \"bank\": \"ABCD\",\r\n            \"taxId\": \"DFS55465dFS\",\r\n            \"currency\": {\r\n                \"id\": 1,\r\n                \"code\": \"USD\",\r\n                \"name\": \"doller\",\r\n                \"countryName\": \"USA\",\r\n                \"countryCode\": 1\r\n            }\r\n        },\r\n        \"document\": [\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            },\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            },\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/supplier",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSupplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/supplier",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchSupplier",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"raghu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/supplier",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSupplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 47,\r\n    \"details\": {\r\n        \"name\": \"raghuy\",\r\n        \"email\": \"this@gmail.com\",\r\n        \"contact\": \"+91 9876543210\",\r\n        \"telephoneNo\": \"012-65432\",\r\n        \"designationNo\": \"1233\",\r\n        \"automateSending\": \"true\",\r\n        \"city\": \"anupgarh\",\r\n        \"state\": \"rajasthan\",\r\n        \"postalCode\": \"13468\",\r\n        \"country\": \"USA\",\r\n        \"paymentTerms\": \"terms\",\r\n        \"category\": \"cat\",\r\n        \"address\": \"Street no. B6, Miami\",\r\n        \"status\": \"active\",\r\n        \"company\": {\r\n            \"name\": \"flipkart\",\r\n            \"registrationNo\": \"123\"\r\n        },\r\n        \"bankDetails\": {\r\n            \"accountHolderName\": \"jitin\",\r\n            \"accountNo\": \"1234565789\",\r\n            \"bank\": \"ABCD\",\r\n            \"taxId\": \"DFS55465dFS\",\r\n            \"currency\": {\r\n                \"id\": 1,\r\n                \"code\": \"USD\",\r\n                \"name\": \"doller\",\r\n                \"countryName\": \"USA\",\r\n                \"countryCode\": 1\r\n            }\r\n        },\r\n        \"document\": [\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            },\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            },\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/supplier",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"supplier"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Currency",
+			"item": [
+				{
+					"name": "addCurrency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"INR\",\r\n    \"name\": \"Rupee\",\r\n    \"countryName\": \"INDIA\",\r\n    \"countryCode\": 91\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/currency",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"currency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCurrency",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/currency",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"currency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchCurrency",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"USD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/currency",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"currency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCurrency",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"details\": {\r\n        \"code\": \"INRP\",\r\n        \"name\": \"Rupee\",\r\n        \"countryName\": \"INDIA\",\r\n        \"countryCode\": 91\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/currency",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"currency"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "addInvoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"url\": \"http://invoice-location.com\",\r\n        \"issueDate\": \"15-01-2045\",\r\n        \"invoiceDueDate\": \"15-01-2022\",\r\n        \"amount\": 24,\r\n        \"tax\": \"+18VAT\",\r\n        \"purchaseOrder\": {\r\n            \"id\": 2,\r\n            \"requesterId\": 1,\r\n            \"fromDate\": \"01-01-2022\",\r\n            \"toDate\": \"02-01-2022\",\r\n            \"createdOn\": \"03-01-2022\",\r\n            \"updatedOn\": \"05-01-2022\",\r\n            \"createdBy\": \"Creater Name\",\r\n            \"updatedBy\": \"Updater Name\",\r\n            \"deliveryDate\": \"10-01-2022\",\r\n            \"status\": \"Pending | Unpaid | Undelivered | Delivered\",\r\n            \"totalNumberOfProduct\": \"1\",\r\n            \"totalAmount\": 24,\r\n            \"paymentTerm\": \"30 Net\",\r\n            \"shippingMethod\": \"Store Pickup\",\r\n            \"paymentWith\": \"Credit card\",\r\n            \"shippingTerms\": \"FOB\",\r\n            \"notes\": \"this is notes for Purchase Order\",\r\n            \"supplier\": {\r\n                \"id\": 2,\r\n                \"name\": \"raghav das\",\r\n                \"email\": \"this@gmail.com\",\r\n                \"contact\": \"+91 9876543210\",\r\n                \"telephoneNo\": \"012-65432\",\r\n                \"designationNo\": \"1233\",\r\n                \"automateSending\": \"true\",\r\n                \"city\": \"jaipur\",\r\n                \"state\": \"rajasthan\",\r\n                \"postalCode\": \"13468\",\r\n                \"country\": \"USA\",\r\n                \"paymentTerms\": \"terms\",\r\n                \"category\": \"cat\",\r\n                \"address\": \"Street no. B6, Miami\",\r\n                \"status\": \"active\",\r\n                \"company\": {\r\n                    \"name\": \"flipkart\",\r\n                    \"registrationNo\": \"123\"\r\n                },\r\n                \"bankDetails\": {\r\n                    \"accountHolderName\": \"jitin\",\r\n                    \"accountNo\": \"1234565789\",\r\n                    \"bank\": \"ABCD\",\r\n                    \"taxId\": \"DFS55465dFS\",\r\n                    \"currency\": {\r\n                        \"id\": 1,\r\n                        \"code\": \"USD\",\r\n                        \"name\": \"doller\",\r\n                        \"countryName\": \"USA\",\r\n                        \"countryCode\": 1\r\n                    }\r\n                },\r\n                \"document\": [\r\n                    {\r\n                        \"name\": \"name\",\r\n                        \"url\": \"\"\r\n                    },\r\n                    {\r\n                        \"name\": \"name\",\r\n                        \"url\": \"\"\r\n                    },\r\n                    {\r\n                        \"name\": \"name\",\r\n                        \"url\": \"\"\r\n                    }\r\n                ]\r\n            },\r\n            \"requestsDetail\": [\r\n                {\r\n                    \"requestId\": 1,\r\n                    \"ids\": [\r\n                        1\r\n                    ]\r\n                }\r\n            ],\r\n            \"purchaseOrderProduct\": [\r\n                {\r\n                    \"item\": {\r\n                        \"id\": 1,\r\n                        \"itemName\": \"mouse\",\r\n                        \"itemType\": \"product\",\r\n                        \"unit\": \"each\",\r\n                        \"category\": \"tech\",\r\n                        \"supplier\": \"flipkart\",\r\n                        \"price\": 12\r\n                    },\r\n                    \"quantity\": 2\r\n                }\r\n            ]\r\n        },\r\n        \"currency\": {\r\n            \"currencyId\": 2,\r\n            \"code\": \"INR\",\r\n            \"Name\": \"Rupee\",\r\n            \"countryName\": \"INDIA\",\r\n            \"countryCode\": \"91\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/invoice",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteInvoice",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/invoice",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchInvoice",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/invoice",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateInvoice",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 47,\r\n    \"details\": {\r\n        \"url\": \"http://invoice-location.com\",\r\n        \"issueDate\": \"15-01-2022\",\r\n        \"invoiceDueDate\": \"15-01-2022\",\r\n        \"amount\": 24,\r\n        \"tax\": \"+20VAT\",\r\n        \"purchaseOrder\": {\r\n            \"id\": 2,\r\n            \"requesterId\": 1,\r\n            \"fromDate\": \"01-01-2022\",\r\n            \"toDate\": \"02-01-2022\",\r\n            \"createdOn\": \"03-01-2022\",\r\n            \"updatedOn\": \"05-01-2022\",\r\n            \"createdBy\": \"Creater Name\",\r\n            \"updatedBy\": \"Updater Name\",\r\n            \"deliveryDate\": \"10-01-2022\",\r\n            \"status\": \"Pending | Unpaid | Undelivered | Delivered\",\r\n            \"totalNumberOfProduct\": \"1\",\r\n            \"totalAmount\": 24,\r\n            \"paymentTerm\": \"30 Net\",\r\n            \"shippingMethod\": \"Store Pickup\",\r\n            \"paymentWith\": \"Credit card\",\r\n            \"shippingTerms\": \"FOB\",\r\n            \"notes\": \"this is notes for Purchase Order\",\r\n            \"supplier\": {\r\n                \"id\": 2,\r\n                \"name\": \"raghav das\",\r\n                \"email\": \"this@gmail.com\",\r\n                \"contact\": \"+91 9876543210\",\r\n                \"telephoneNo\": \"012-65432\",\r\n                \"designationNo\": \"1233\",\r\n                \"automateSending\": \"true\",\r\n                \"city\": \"jaipur\",\r\n                \"state\": \"rajasthan\",\r\n                \"postalCode\": \"13468\",\r\n                \"country\": \"USA\",\r\n                \"paymentTerms\": \"terms\",\r\n                \"category\": \"cat\",\r\n                \"address\": \"Street no. B6, Miami\",\r\n                \"status\": \"active\",\r\n                \"company\": {\r\n                    \"name\": \"flipkart\",\r\n                    \"registrationNo\": \"123\"\r\n                },\r\n                \"bankDetails\": {\r\n                    \"accountHolderName\": \"jitin\",\r\n                    \"accountNo\": \"1234565789\",\r\n                    \"bank\": \"ABCD\",\r\n                    \"taxId\": \"DFS55465dFS\",\r\n                    \"currency\": {\r\n                        \"id\": 1,\r\n                        \"code\": \"USD\",\r\n                        \"name\": \"doller\",\r\n                        \"countryName\": \"USA\",\r\n                        \"countryCode\": 1\r\n                    }\r\n                },\r\n                \"document\": [\r\n                    {\r\n                        \"name\": \"name\",\r\n                        \"url\": \"\"\r\n                    },\r\n                    {\r\n                        \"name\": \"name\",\r\n                        \"url\": \"\"\r\n                    },\r\n                    {\r\n                        \"name\": \"name\",\r\n                        \"url\": \"\"\r\n                    }\r\n                ]\r\n            },\r\n            \"requestsDetail\": [\r\n                {\r\n                    \"requestId\": 1,\r\n                    \"ids\": [\r\n                        1\r\n                    ]\r\n                }\r\n            ],\r\n            \"purchaseOrderProduct\": [\r\n                {\r\n                    \"item\": {\r\n                        \"id\": 1,\r\n                        \"itemName\": \"mouse\",\r\n                        \"itemType\": \"product\",\r\n                        \"unit\": \"each\",\r\n                        \"category\": \"tech\",\r\n                        \"supplier\": \"flipkart\",\r\n                        \"price\": 12\r\n                    },\r\n                    \"quantity\": 2\r\n                }\r\n            ]\r\n        },\r\n        \"currency\": {\r\n            \"currencyId\": 2,\r\n            \"code\": \"INR\",\r\n            \"Name\": \"Rupee\",\r\n            \"countryName\": \"INDIA\",\r\n            \"countryCode\": \"91\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/invoice",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PurchaseOrder",
+			"item": [
+				{
+					"name": "addPurchaseOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"requesterId\": 1,\r\n        \"fromDate\": \"01-01-2022\",\r\n        \"toDate\": \"02-01-2022\",\r\n        \"createdOn\": \"03-01-2022\",\r\n        \"updatedOn\": \"05-01-2022\",\r\n        \"createdBy\": \"Creater Name\",\r\n        \"updatedBy\": \"Updater Name\",\r\n        \"deliveryDate\": \"10-01-2022\",\r\n        \"status\": \"Pending | Unpaid | Undelivered | Delivered\",\r\n        \"totalNumberOfProduct\": \"3\",\r\n        \"totalAmount\": 824,\r\n        \"paymentTerm\": \"30 Net\",\r\n        \"shippingMethod\": \"Store Pickup\",\r\n        \"paymentWith\": \"Credit card\",\r\n        \"shippingTerms\": \"FOB\",\r\n        \"notes\": \"this is notes for Purchase Order\",\r\n        \"supplier\": {\r\n            \"id\": 1,\r\n            \"name\": \"andrew choudhary\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"contact\": \"+91 9876543210\",\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\",\r\n            \"city\": \"jaipur\",\r\n            \"state\": \"rajasthan\",\r\n            \"postalCode\": \"13468\",\r\n            \"country\": \"USA\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"category\": \"cat\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"status\": \"active\",\r\n            \"company\": {\r\n                \"name\": \"amazone\",\r\n                \"registrationNo\": \"123\"\r\n            },\r\n            \"bankDetails\": {\r\n                \"accountHolderName\": \"jitin\",\r\n                \"accountNo\": \"1234565789\",\r\n                \"bank\": \"ABCD\",\r\n                \"taxId\": \"DFS55465dFS\",\r\n                \"currency\": {\r\n                    \"id\": 1,\r\n                    \"code\": \"USD\",\r\n                    \"name\": \"doller\",\r\n                    \"countryName\": \"USA\",\r\n                    \"countryCode\": 1\r\n                }\r\n            },\r\n            \"document\": [\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"requestsDetail\": [\r\n            {\r\n                \"requestId\": 1,\r\n                \"ids\": [\r\n                    2\r\n                ]\r\n            },\r\n            {\r\n                \"requestId\": 2,\r\n                \"ids\": [\r\n                    1\r\n                ]\r\n            }\r\n        ],\r\n        \"purchaseOrderProducts\": [\r\n            {\r\n                \"item\": {\r\n                    \"id\": 2,\r\n                    \"itemName\": \"hp laptop\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"category\": \"tech\",\r\n                    \"price\": 800\r\n                },\r\n                \"quantity\": 1\r\n            },\r\n            {\r\n                \"item\": {\r\n                    \"id\": 1,\r\n                    \"itemName\": \"mouse\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"category\": \"tech\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"price\": 12\r\n                },\r\n                \"quantity\": 2\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/purchase_order",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"purchase_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePurchaseOrder",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/purchase_order",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"purchase_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchPurchaseOrder",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/purchase_order",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"purchase_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePurchaseOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"details\": {\r\n        \"requesterId\": 1,\r\n        \"fromDate\": \"01-01-2022\",\r\n        \"toDate\": \"02-01-2022\",\r\n        \"createdOn\": \"03-01-2022\",\r\n        \"updatedOn\": \"05-01-2022\",\r\n        \"createdBy\": \"Creater Name\",\r\n        \"updatedBy\": \"Updater Name\",\r\n        \"deliveryDate\": \"10-01-2022\",\r\n        \"status\": \"Pending | Unpaid | Undelivered | Delivered\",\r\n        \"totalNumberOfProduct\": \"3\",\r\n        \"totalAmount\": 824,\r\n        \"paymentTerm\": \"30 Net\",\r\n        \"shippingMethod\": \"Store Pickup\",\r\n        \"paymentWith\": \"Credit card\",\r\n        \"shippingTerms\": \"FOB\",\r\n        \"notes\": \"this\",\r\n        \"supplier\": {\r\n            \"id\": 1,\r\n            \"name\": \"andrew choudhary\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"contact\": \"+91 9876543210\",\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\",\r\n            \"city\": \"jaipur\",\r\n            \"state\": \"rajasthan\",\r\n            \"postalCode\": \"13468\",\r\n            \"country\": \"USA\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"category\": \"cat\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"status\": \"active\",\r\n            \"company\": {\r\n                \"name\": \"amazone\",\r\n                \"registrationNo\": \"123\"\r\n            },\r\n            \"bankDetails\": {\r\n                \"accountHolderName\": \"jitin\",\r\n                \"accountNo\": \"1234565789\",\r\n                \"bank\": \"ABCD\",\r\n                \"taxId\": \"DFS55465dFS\",\r\n                \"currency\": {\r\n                    \"id\": 1,\r\n                    \"code\": \"USD\",\r\n                    \"name\": \"doller\",\r\n                    \"countryName\": \"USA\",\r\n                    \"countryCode\": 1\r\n                }\r\n            },\r\n            \"document\": [\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"requestsDetail\": [\r\n            {\r\n                \"requestId\": 1,\r\n                \"ids\": [\r\n                    2\r\n                ]\r\n            },\r\n            {\r\n                \"requestId\": 2,\r\n                \"ids\": [\r\n                    1\r\n                ]\r\n            }\r\n        ],\r\n        \"purchaseOrderProducts\": [\r\n            {\r\n                \"item\": {\r\n                    \"id\": 2,\r\n                    \"itemName\": \"hp laptop\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"category\": \"tech\",\r\n                    \"price\": 800\r\n                },\r\n                \"quantity\": 1\r\n            },\r\n            {\r\n                \"item\": {\r\n                    \"id\": 1,\r\n                    \"itemName\": \"mouse\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"category\": \"tech\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"price\": 12\r\n                },\r\n                \"quantity\": 2\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/purchase_order",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"purchase_order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
