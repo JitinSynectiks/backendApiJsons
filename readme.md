@@ -20,9 +20,22 @@ Code   | Summary
 ------------- | -------------
 200 - OK  | Everything worked as expected.
 400 - Bad Request  | The request was unacceptable, often due to missing a required parameter.
+401 - Unauthorized | No valid API key provided.
+402 - Request Failed | The parameters were valid but the request failed.
+403 - Forbidden | The API key doesn't have permissions to perform the request.
+404 - Not Found | The requested resource doesn't exist.
+409 - Conflict | The request conflicts with another request (perhaps due to using the same idempotent key)
+429 - Too Many Requests | Too many requests hit the API too quickly. We recommend an exponential backoff of your requests.
+500, 502, 503, 504 - Server Errors | Something went wrong on Stripe's end. (These are rare.)
 800 - NEGATIVE_ID_NOT_ALLOWED | Negative id not allowed 
 801 - ID_NOT_FOUND | Id not found
-802 - INVALID_INPUT | Invalid input
+803 - DATA_NOT_FOUND | Data not found
+804 - JSON_MAPPING_EXCEPTION | JSON mapping exception
+805 - JSON_PROCESSING_EXCEPTION | JSON processing exception
+806 - JSON_EXCEPTION | JSON exception 
+807 - IO_EXCEPTION | IO exception
+808 - PARSE_EXCEPTION | Parse exception
+8020 - NO_APPROVAL_RIGHTS | Current role cannot approve
 
 ## Attributes
 
@@ -57,7 +70,8 @@ invalid_request_error |	Invalid request errors arise when your request has inval
 
 Entity Name | Endpoint | Methods
 ------------|----------|---------
-Request | /request | GET, POST, PUT, DELETE
+Request | /request  | GET, POST, PUT, DELETE
+Request | /request/approve  | POST
 Product | /product| GET, POST, PUT, DELETE
 Supplier | /supplier| GET, POST, PUT, DELETE
 Currency | /currency| GET, POST, PUT, DELETE
@@ -635,9 +649,13 @@ Api to request approve.
 ```json
 	Method: POST
 	RequestBody:
-		{ "id" : 1 }
+		{
+            "id": 36,
+            "role": "admin",
+            "price": 104
+        }
 	Response:
-	    {
+	   {
             "code": 200,
             "message": "request approved successfully",
             "type": "object",
@@ -647,7 +665,13 @@ Api to request approve.
 
 *CURL*
 ```json
-    * TODO *
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request/approve' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 36,
+    "role": "admin",
+    "price": 104
+}'
 ```
 
 

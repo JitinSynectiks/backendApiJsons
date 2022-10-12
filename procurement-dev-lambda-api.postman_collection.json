@@ -74,6 +74,39 @@
 					"response": []
 				},
 				{
+					"name": "approve request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 36,\r\n    \"role\": \"admin\",\r\n    \"price\": 104\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request/approve",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"request",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "searchRequest",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -592,7 +625,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":1}",
+							"raw": "{\r\n    \"id\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
