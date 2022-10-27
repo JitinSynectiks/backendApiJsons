@@ -660,7 +660,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":3\r\n}",
+							"raw": "{\r\n   \"amount\": 24\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -848,6 +848,142 @@
 							"path": [
 								"procurement-dev",
 								"purchase_order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quotation",
+			"item": [
+				{
+					"name": "addQuotation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"openDate\": \"01-01-2000\",\r\n    \"closingDate\": \"01-01-2000\",\r\n    \"requiredDeliveryDate\": \"01-01-2000\",\r\n    \"rfqType\": \"this\",\r\n    \"location\": \"head office\",\r\n    \"note\": \"this is note\",\r\n    \"products\": [\r\n        {\r\n            \"item\": {\r\n                \"id\": 1,\r\n                \"details\": {\r\n                    \"itemName\": \"mouse\",\r\n                    \"price\": 12,\r\n                    \"unit\": \"each\",\r\n                    \"itemType\": \"product\",\r\n                    \"category\": \"tech\",\r\n                    \"supplier\": {\r\n                        \"id\": 1,\r\n                        \"name\": \"andrew choudhary\",\r\n                        \"email\": \"this@gmail.com\",\r\n                        \"contact\": \"+91 9876543210\",\r\n                        \"telephoneNo\": \"012-65432\",\r\n                        \"designationNo\": \"1233\",\r\n                        \"automateSending\": \"true\",\r\n                        \"city\": \"jaipur\",\r\n                        \"state\": \"rajasthan\",\r\n                        \"postalCode\": \"13468\",\r\n                        \"country\": \"USA\",\r\n                        \"paymentTerms\": \"terms\",\r\n                        \"category\": \"cat\",\r\n                        \"address\": \"Street no. B6, Miami\",\r\n                        \"status\": \"active\",\r\n                        \"company\": {\r\n                            \"name\": \"amazone\",\r\n                            \"registrationNo\": \"123\"\r\n                        },\r\n                        \"bankDetails\": {\r\n                            \"accountHolderName\": \"jitin\",\r\n                            \"accountNo\": \"1234565789\",\r\n                            \"bank\": \"ABCD\",\r\n                            \"taxId\": \"DFS55465dFS\",\r\n                            \"currency\": {\r\n                                \"id\": 1,\r\n                                \"code\": \"USD\",\r\n                                \"name\": \"doller\",\r\n                                \"countryName\": \"USA\",\r\n                                \"countryCode\": 1\r\n                            }\r\n                        },\r\n                        \"document\": [\r\n                            {\r\n                                \"name\": \"name\",\r\n                                \"url\": \"\"\r\n                            },\r\n                            {\r\n                                \"name\": \"name\",\r\n                                \"url\": \"\"\r\n                            },\r\n                            {\r\n                                \"name\": \"name\",\r\n                                \"url\": \"\"\r\n                            }\r\n                        ]\r\n                    }\r\n                }\r\n            },\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"item\": {\r\n                \"id\": 1,\r\n                \"itemName\": \"mouse\",\r\n                \"price\": 12,\r\n                \"unit\": \"each\",\r\n                \"itemType\": \"product\",\r\n                \"category\": \"tech\",\r\n                \"supplier\": {\r\n                    \"id\": 1,\r\n                    \"name\": \"andrew choudhary\",\r\n                    \"email\": \"this@gmail.com\",\r\n                    \"contact\": \"+91 9876543210\",\r\n                    \"telephoneNo\": \"012-65432\",\r\n                    \"designationNo\": \"1233\",\r\n                    \"automateSending\": \"true\",\r\n                    \"city\": \"jaipur\",\r\n                    \"state\": \"rajasthan\",\r\n                    \"postalCode\": \"13468\",\r\n                    \"country\": \"USA\",\r\n                    \"paymentTerms\": \"terms\",\r\n                    \"category\": \"cat\",\r\n                    \"address\": \"Street no. B6, Miami\",\r\n                    \"status\": \"active\",\r\n                    \"company\": {\r\n                        \"name\": \"amazone\",\r\n                        \"registrationNo\": \"123\"\r\n                    },\r\n                    \"bankDetails\": {\r\n                        \"accountHolderName\": \"jitin\",\r\n                        \"accountNo\": \"1234565789\",\r\n                        \"bank\": \"ABCD\",\r\n                        \"taxId\": \"DFS55465dFS\",\r\n                        \"currency\": {\r\n                            \"id\": 1,\r\n                            \"code\": \"USD\",\r\n                            \"name\": \"doller\",\r\n                            \"countryName\": \"USA\",\r\n                            \"countryCode\": 1\r\n                        }\r\n                    },\r\n                    \"document\": [\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        },\r\n                        {\r\n                            \"name\": \"name\",\r\n                            \"url\": \"\"\r\n                        }\r\n                    ]\r\n                }\r\n            },\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"paymentTerms\": \"terms\",\r\n    \"paymentMode\": \"ABCD\",\r\n    \"incoterms\": \"ABCD\",\r\n    \"modeOfDelivery\": \"accountHolderName\",\r\n    \"document\": [\r\n        {\r\n            \"name\": \"name\",\r\n            \"url\": \"\"\r\n        },\r\n        {\r\n            \"name\": \"name\",\r\n            \"url\": \"\"\r\n        },\r\n        {\r\n            \"name\": \"name\",\r\n            \"url\": \"\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"quotation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQuotation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"quotation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchQuotation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rfqType\": \"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"quotation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuotation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"details\": {\r\n        \"openDate\": \"01-01-2000\",\r\n        \"closingDate\": \"01-01-2000\",\r\n        \"requiredDeliveryDate\": \"01-01-2000\",\r\n        \"rfqType\": \"demo\",\r\n        \"location\": \"head office\",\r\n        \"note\": \"this is note\",\r\n        \"products\": [\r\n            {\r\n                \"item\": {\r\n                    \"id\": 1,\r\n                    \"details\": {\r\n                        \"itemName\": \"mouse\",\r\n                        \"price\": 12,\r\n                        \"unit\": \"each\",\r\n                        \"itemType\": \"product\",\r\n                        \"category\": \"tech\",\r\n                        \"supplier\": {\r\n                            \"id\": 1,\r\n                            \"name\": \"andrew choudhary\",\r\n                            \"email\": \"this@gmail.com\",\r\n                            \"contact\": \"+91 9876543210\",\r\n                            \"telephoneNo\": \"012-65432\",\r\n                            \"designationNo\": \"1233\",\r\n                            \"automateSending\": \"true\",\r\n                            \"city\": \"jaipur\",\r\n                            \"state\": \"rajasthan\",\r\n                            \"postalCode\": \"13468\",\r\n                            \"country\": \"USA\",\r\n                            \"paymentTerms\": \"terms\",\r\n                            \"category\": \"cat\",\r\n                            \"address\": \"Street no. B6, Miami\",\r\n                            \"status\": \"active\",\r\n                            \"company\": {\r\n                                \"name\": \"amazone\",\r\n                                \"registrationNo\": \"123\"\r\n                            },\r\n                            \"bankDetails\": {\r\n                                \"accountHolderName\": \"jitin\",\r\n                                \"accountNo\": \"1234565789\",\r\n                                \"bank\": \"ABCD\",\r\n                                \"taxId\": \"DFS55465dFS\",\r\n                                \"currency\": {\r\n                                    \"id\": 1,\r\n                                    \"code\": \"USD\",\r\n                                    \"name\": \"doller\",\r\n                                    \"countryName\": \"USA\",\r\n                                    \"countryCode\": 1\r\n                                }\r\n                            },\r\n                            \"document\": [\r\n                                {\r\n                                    \"name\": \"name\",\r\n                                    \"url\": \"\"\r\n                                },\r\n                                {\r\n                                    \"name\": \"name\",\r\n                                    \"url\": \"\"\r\n                                },\r\n                                {\r\n                                    \"name\": \"name\",\r\n                                    \"url\": \"\"\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                },\r\n                \"quantity\": 2\r\n            },\r\n            {\r\n                \"item\": {\r\n                    \"id\": 1,\r\n                    \"itemName\": \"mouse\",\r\n                    \"price\": 12,\r\n                    \"unit\": \"each\",\r\n                    \"itemType\": \"product\",\r\n                    \"category\": \"tech\",\r\n                    \"supplier\": {\r\n                        \"id\": 1,\r\n                        \"name\": \"andrew choudhary\",\r\n                        \"email\": \"this@gmail.com\",\r\n                        \"contact\": \"+91 9876543210\",\r\n                        \"telephoneNo\": \"012-65432\",\r\n                        \"designationNo\": \"1233\",\r\n                        \"automateSending\": \"true\",\r\n                        \"city\": \"jaipur\",\r\n                        \"state\": \"rajasthan\",\r\n                        \"postalCode\": \"13468\",\r\n                        \"country\": \"USA\",\r\n                        \"paymentTerms\": \"terms\",\r\n                        \"category\": \"cat\",\r\n                        \"address\": \"Street no. B6, Miami\",\r\n                        \"status\": \"active\",\r\n                        \"company\": {\r\n                            \"name\": \"amazone\",\r\n                            \"registrationNo\": \"123\"\r\n                        },\r\n                        \"bankDetails\": {\r\n                            \"accountHolderName\": \"jitin\",\r\n                            \"accountNo\": \"1234565789\",\r\n                            \"bank\": \"ABCD\",\r\n                            \"taxId\": \"DFS55465dFS\",\r\n                            \"currency\": {\r\n                                \"id\": 1,\r\n                                \"code\": \"USD\",\r\n                                \"name\": \"doller\",\r\n                                \"countryName\": \"USA\",\r\n                                \"countryCode\": 1\r\n                            }\r\n                        },\r\n                        \"document\": [\r\n                            {\r\n                                \"name\": \"name\",\r\n                                \"url\": \"\"\r\n                            },\r\n                            {\r\n                                \"name\": \"name\",\r\n                                \"url\": \"\"\r\n                            },\r\n                            {\r\n                                \"name\": \"name\",\r\n                                \"url\": \"\"\r\n                            }\r\n                        ]\r\n                    }\r\n                },\r\n                \"quantity\": 2\r\n            }\r\n        ],\r\n        \"paymentTerms\": \"terms\",\r\n        \"paymentMode\": \"ABCD\",\r\n        \"incoterms\": \"ABCD\",\r\n        \"modeOfDelivery\": \"accountHolderName\",\r\n        \"document\": [\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            },\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            },\r\n            {\r\n                \"name\": \"name\",\r\n                \"url\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"quotation"
 							]
 						}
 					},
