@@ -72,11 +72,17 @@ Entity Name | Endpoint | Methods
 ------------|----------|---------
 Request | /request  | GET, POST, PUT, DELETE
 Request | /request/approve  | POST
+Request | /request/deactivate  | POST
 Product | /product| GET, POST, PUT, DELETE
+Product | /product/deactivate | POST
 Supplier | /supplier| GET, POST, PUT, DELETE
+Supplier | /supplier/deactivate| POST
 Currency | /currency| GET, POST, PUT, DELETE
+Currency | /currency/deactivate | POST
 Invoice | /invoice| GET, POST, PUT, DELETE
+Invoice | /invoice/deactivate | POST
 PurchseOrder | /purchase_order| GET, POST, PUT, DELETE
+PurchseOrder | /purchase_order/deactivate| POST
 
 ## **Request-Entity**
 
@@ -675,6 +681,32 @@ curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazona
 ```
 
 
+**/request/deactivate**
+
+Api to request deactivation.
+
+```json
+	Method: POST
+	RequestBody:
+		{
+            "id": 36,
+        }
+	Response:
+	   {
+            "code": 200,
+            "message": "request deactivated successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+TODO
+```
+
+
 ## **Product-Entity**
 ```json
 
@@ -1073,6 +1105,31 @@ curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazo
 }'
 ```
 
+**/product/deactivate**
+
+Api to product deactivation.
+
+```json
+	Method: POST
+	RequestBody:
+		{
+            "id": 36,
+        }
+	Response:
+	   {
+            "code": 200,
+            "message": "product deactivated successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+TODO
+```
+
 
 ## **Supplier-Entity**
 ```json
@@ -1423,6 +1480,33 @@ curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazo
 }'
 ```
 
+
+**/supplier/deactivate**
+
+Api to supplier deactivation.
+
+```json
+	Method: POST
+	RequestBody:
+		{
+            "id": 36,
+        }
+	Response:
+	   {
+            "code": 200,
+            "message": "supplier deactivated successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+TODO
+```
+
+
 ## **currency-Entity**
 ```json
 {
@@ -1565,6 +1649,31 @@ curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazo
 --data-raw '{
     "id":1
 }'
+```
+
+**/currency/deactivate**
+
+Api to currency deactivation.
+
+```json
+	Method: POST
+	RequestBody:
+		{
+            "id": 36,
+        }
+	Response:
+	   {
+            "code": 200,
+            "message": "currency deactivated successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+TODO
 ```
 
 ## **Invoice-Entity**
@@ -2195,6 +2304,32 @@ curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazo
     "id": 1
 }'
 ```
+
+**/invoice/deactivate**
+
+Api to invoice deactivation.
+
+```json
+	Method: POST
+	RequestBody:
+		{
+            "id": 36,
+        }
+	Response:
+	   {
+            "code": 200,
+            "message": "invoice deactivated successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+TODO
+```
+
 
 ## **Purchase order-Entity**
 ```json
@@ -2841,6 +2976,30 @@ curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazo
 ```
 
 
+**/purchase_order/deactivate**
+
+Api to purchase_order deactivation.
+
+```json
+	Method: POST
+	RequestBody:
+		{
+            "id": 36,
+        }
+	Response:
+	   {
+            "code": 200,
+            "message": "purchase_order deactivated successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+TODO
+```
 
 
 

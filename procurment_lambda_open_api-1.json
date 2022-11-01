@@ -363,6 +363,81 @@
                 "parameters": []
             }
         },
+        "/request/deactivate": {
+            "post": {
+                "summary": "deactivate request",
+                "operationId": "deactivateRequest",
+                "requestBody": {
+                    "description": "deactivate new request",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
+                                        "description": "id of request"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "deactivate request successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "deactivate request Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "request"
+                ],
+                "parameters": []
+            }
+        },
         "/product": {
             "get": {
                 "summary": "Details of product",
@@ -604,6 +679,81 @@
                                         "message": {
                                             "type": "string",
                                             "default": "Delete product Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "product"
+                ],
+                "parameters": []
+            }
+        },
+        "/product/deactivate": {
+            "post": {
+                "summary": "deactivate product",
+                "operationId": "deactivateProduct",
+                "requestBody": {
+                    "description": "deactivate new product",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
+                                        "description": "id of product"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "deactivate product successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "deactivate product Successfully"
                                         },
                                         "type": {
                                             "type": "string",
@@ -901,6 +1051,81 @@
                 "parameters": []
             }
         },
+        "/currency/deactivate": {
+            "post": {
+                "summary": "deactivate currency",
+                "operationId": "deactivatecurrency",
+                "requestBody": {
+                    "description": "deactivate new currency",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
+                                        "description": "id of currency"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "deactivate currency successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "deactivate currency Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "currency"
+                ],
+                "parameters": []
+            }
+        },
         "/supplier": {
             "get": {
                 "summary": "Details of supplier",
@@ -1142,6 +1367,81 @@
                                         "message": {
                                             "type": "string",
                                             "default": "Delete supplier Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "supplier"
+                ],
+                "parameters": []
+            }
+        },
+        "/supplier/deactivate": {
+            "post": {
+                "summary": "deactivate supplier",
+                "operationId": "deactivatesupplier",
+                "requestBody": {
+                    "description": "deactivate new supplier",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
+                                        "description": "id of supplier"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "deactivate supplier successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "deactivate supplier Successfully"
                                         },
                                         "type": {
                                             "type": "string",
@@ -1439,6 +1739,81 @@
                 "parameters": []
             }
         },
+        "/purchaseOrder/deactivate": {
+            "post": {
+                "summary": "deactivate purchaseOrder",
+                "operationId": "deactivatepurchaseOrder",
+                "requestBody": {
+                    "description": "deactivate new purchaseOrder",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
+                                        "description": "id of purchaseOrder"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "deactivate purchaseOrder successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "deactivate purchaseOrder Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "purchaseOrder"
+                ],
+                "parameters": []
+            }
+        },
         "/invoice": {
             "get": {
                 "summary": "Details of invoice",
@@ -1680,6 +2055,81 @@
                                         "message": {
                                             "type": "string",
                                             "default": "Delete invoice Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "invoice"
+                ],
+                "parameters": []
+            }
+        },
+        "/invoice/deactivate": {
+            "post": {
+                "summary": "deactivate invoice",
+                "operationId": "deactivateinvoice",
+                "requestBody": {
+                    "description": "deactivate new invoice",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })",
+                                        "description": "id of invoice"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "deactivate invoice successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "deactivate invoice Successfully"
                                         },
                                         "type": {
                                             "type": "string",
