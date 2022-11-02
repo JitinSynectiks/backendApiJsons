@@ -4,6 +4,7 @@
         "code": "USD",
         "name": "doller",
         "countryName": "USA",
-        "countryCode": 1
+        "countryCode": 1,
+        "status":"ACTIVE"
     }
 }

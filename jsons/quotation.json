@@ -5,6 +5,11 @@
     "rfqType": "demo",
     "location": "head office",
     "note": "this is note",
+    "paymentTerms": "terms",
+    "paymentMode": "ABCD",
+    "incoterms": "ABCD",
+    "modeOfDelivery": "accountHolderName",
+    "status":"active",
     "products": [
         {
             "item": {
@@ -127,10 +132,6 @@
             "quantity": 2
         }
     ],
-    "paymentTerms": "terms",
-    "paymentMode": "ABCD",
-    "incoterms": "ABCD",
-    "modeOfDelivery": "accountHolderName",
     "document": [
         {
             "name": "name",

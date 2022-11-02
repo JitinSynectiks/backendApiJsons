@@ -12,7 +12,7 @@
         "location": "head office",
         "requestType": "purchase",
         "note": "this is note",
-        "state": "pending",
+        "status":"ACTIVE",
         "progressStage": "new",
         "totalAmount": 824,
         "department": "development",

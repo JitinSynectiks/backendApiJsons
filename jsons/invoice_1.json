@@ -6,6 +6,7 @@
         "invoiceDueDate": "15-01-2022",
         "amount": 824,
         "tax": "+18VAT",
+        "status":"ACTIVE",
         "purchaseOrder": {
             "id": 1,
             "requesterId": 1,

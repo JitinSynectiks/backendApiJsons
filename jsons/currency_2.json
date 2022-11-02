@@ -4,6 +4,7 @@
         "code": "INR",
         "name": "Rupee",
         "countryName": "INDIA",
-        "countryCode": 91
+        "countryCode": 91,
+        "status":"ACTIVE"
     }
 }
