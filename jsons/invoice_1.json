@@ -4,122 +4,136 @@
         "url": "http://invoice-location.com",
         "issueDate": "15-01-2022",
         "invoiceDueDate": "15-01-2022",
-        "amount": 824,
+        "amount": "824",
         "tax": "+18VAT",
-        "status":"ACTIVE",
+        "status": "ACTIVE",
         "purchaseOrder": {
             "id": 1,
-            "requesterId": 1,
-            "fromDate": "01-01-2022",
-            "toDate": "02-01-2022",
-            "createdOn": "03-01-2022",
-            "updatedOn": "05-01-2022",
-            "createdBy": "Creater Name",
-            "updatedBy": "Updater Name",
-            "deliveryDate": "10-01-2022",
-            "status": "Pending | Unpaid | Undelivered | Delivered",
-            "totalNumberOfProduct": "3",
-            "totalAmount": 824,
-            "paymentTerm": "30 Net",
-            "shippingMethod": "Store Pickup",
-            "paymentWith": "Credit card",
-            "shippingTerms": "FOB",
-            "notes": "this is notes for Purchase Order",
-            "supplier": {
-                "id": 1,
-                "name": "andrew choudhary",
-                "email": "this@gmail.com",
-                "contact": "+91 9876543210",
-                "telephoneNo": "012-65432",
-                "designationNo": "1233",
-                "automateSending": "true",
-                "city": "jaipur",
-                "state": "rajasthan",
-                "postalCode": "13468",
-                "country": "USA",
-                "paymentTerms": "terms",
-                "category": "cat",
-                "address": "Street no. B6, Miami",
-                "status": "active",
-                "company": {
-                    "name": "amazone",
-                    "registrationNo": "123"
-                },
-                "bankDetails": {
-                    "accountHolderName": "jitin",
-                    "accountNo": "1234565789",
-                    "bank": "ABCD",
-                    "taxId": "DFS55465dFS",
-                    "currency": {
-                        "id": 1,
-                        "code": "USD",
-                        "name": "doller",
-                        "countryName": "USA",
-                        "countryCode": 1
+            "details": {
+                "requesterId": 1,
+                "fromDate": "01-01-2022",
+                "toDate": "02-01-2022",
+                "createdOn": "03-01-2022",
+                "updatedOn": "05-01-2022",
+                "createdBy": "Creater Name",
+                "updatedBy": "Updater Name",
+                "deliveryDate": "10-01-2022",
+                "status": "Pending | Unpaid | Undelivered | Delivered",
+                "totalNumberOfProduct": "3",
+                "totalAmount": 824,
+                "paymentTerm": "30 Net",
+                "shippingMethod": "Store Pickup",
+                "paymentWith": "Credit card",
+                "shippingTerms": "FOB",
+                "notes": "this is notes for Purchase Order",
+                "supplier": {
+                    "id": 1,
+                    "details": {
+                        "name": "andrew choudhary",
+                        "email": "this@gmail.com",
+                        "contact": "+91 9876543210",
+                        "telephoneNo": "012-65432",
+                        "designationNo": "1233",
+                        "automateSending": "true",
+                        "city": "jaipur",
+                        "state": "rajasthan",
+                        "postalCode": "13468",
+                        "country": "USA",
+                        "paymentTerms": "terms",
+                        "category": "cat",
+                        "address": "Street no. B6, Miami",
+                        "status": "active",
+                        "company": {
+                            "name": "amazone",
+                            "registrationNo": "123"
+                        },
+                        "bankDetails": {
+                            "accountHolderName": "jitin",
+                            "accountNo": "1234565789",
+                            "bank": "ABCD",
+                            "taxId": "DFS55465dFS",
+                            "currency": {
+                                "id": 1,
+                                "code": "USD",
+                                "name": "doller",
+                                "countryName": "USA",
+                                "countryCode": 1
+                            }
+                        },
+                        "document": [
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            }
+                        ]
                     }
                 },
-                "document": [
+                "requestsDetail": [
                     {
-                        "name": "name",
-                        "url": ""
+                        "requestId": 1,
+                        "productIds": [
+                            2,
+                            3
+                        ]
                     },
                     {
-                        "name": "name",
-                        "url": ""
+                        "requestId": 2,
+                        "productIds": [
+                            1,
+                            2
+                        ]
+                    }
+                ],
+                "purchaseOrderProducts": [
+                    {
+                        "item": {
+                            "id": 1,
+                            "details": {
+                                "itemName": "mouse",
+                                "price": 12,
+                                "unit": "each",
+                                "itemType": "product",
+                                "category": "tech",
+                                "imgUrl": "http://imgSynectiks.com",
+                                "status": "ACTIVE"
+                            }
+                        },
+                        "quantity": 1
                     },
                     {
-                        "name": "name",
-                        "url": ""
+                        "item": {
+                            "id": 2,
+                            "details": {
+                                "itemName": "hp laptop",
+                                "itemType": "product",
+                                "unit": "each",
+                                "category": "tech",
+                                "price": 800,
+                                "imgUrl": "http://imgSynectiks.com",
+                                "status": "ACTIVE"
+                            }
+                        },
+                        "quantity": 2
                     }
                 ]
-            },
-            "requestsDetail": [
-                {
-                    "requestId": 1,
-                    "ids": [
-                        2
-                    ]
-                },
-                {
-                    "requestId": 2,
-                    "ids": [
-                        1
-                    ]
-                }
-            ],
-            "purchaseOrderProducts": [
-                {
-                    "item": {
-                        "id": 2,
-                        "itemName": "hp laptop",
-                        "itemType": "product",
-                        "unit": "each",
-                        "supplier": "amazone",
-                        "category": "tech",
-                        "price": 800
-                    },
-                    "quantity": 1
-                },
-                {
-                    "item": {
-                        "id": 1,
-                        "itemName": "mouse",
-                        "itemType": "product",
-                        "unit": "each",
-                        "category": "tech",
-                        "supplier": "amazone",
-                        "price": 12
-                    },
-                    "quantity": 2
-                }
-            ]
+            }
         },
         "currency": {
-            "currencyId": 1,
-            "code": "USD",
-            "Name": "doller",
-            "countryName": "USA",
-            "countryCode": "1"
+            "id": 1,
+            "details": {
+                "code": "USD",
+                "Name": "doller",
+                "countryName": "USA",
+                "countryCode": "1"
+            }
         }
     }
 }

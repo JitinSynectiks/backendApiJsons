@@ -19,73 +19,150 @@
         "notes": "this is notes for Purchase Order",
         "supplier": {
             "id": 2,
-            "name": "raghav das",
-            "email": "this@gmail.com",
-            "contact": "+91 9876543210",
-            "telephoneNo": "012-65432",
-            "designationNo": "1233",
-            "automateSending": "true",
-            "city": "jaipur",
-            "state": "rajasthan",
-            "postalCode": "13468",
-            "country": "USA",
-            "paymentTerms": "terms",
-            "category": "cat",
-            "address": "Street no. B6, Miami",
-            "status": "active",
-            "company": {
-                "name": "flipkart",
-                "registrationNo": "123"
-            },
-            "bankDetails": {
-                "accountHolderName": "jitin",
-                "accountNo": "1234565789",
-                "bank": "ABCD",
-                "taxId": "DFS55465dFS",
-                "currency": {
-                    "id": 1,
-                    "code": "USD",
-                    "name": "doller",
-                    "countryName": "USA",
-                    "countryCode": 1
-                }
-            },
-            "document": [
-                {
-                    "name": "name",
-                    "url": ""
+            "details": {
+                "name": "raghav das",
+                "email": "this@gmail.com",
+                "contact": "+91 9876543210",
+                "telephoneNo": "012-65432",
+                "designationNo": "1233",
+                "automateSending": "true",
+                "city": "jaipur",
+                "state": "rajasthan",
+                "postalCode": "13468",
+                "country": "USA",
+                "paymentTerms": "terms",
+                "category": "cat",
+                "address": "Street no. B6, Miami",
+                "status": "active",
+                "company": {
+                    "name": "flipkart",
+                    "registrationNo": "123"
                 },
-                {
-                    "name": "name",
-                    "url": ""
+                "bankDetails": {
+                    "accountHolderName": "jitin",
+                    "accountNo": "1234565789",
+                    "bank": "ABCD",
+                    "taxId": "DFS55465dFS",
+                    "currency": {
+                        "id": 1,
+                        "code": "USD",
+                        "name": "doller",
+                        "countryName": "USA",
+                        "countryCode": 1
+                    }
                 },
-                {
-                    "name": "name",
-                    "url": ""
-                }
-            ]
+                "document": [
+                    {
+                        "name": "name",
+                        "url": ""
+                    },
+                    {
+                        "name": "name",
+                        "url": ""
+                    },
+                    {
+                        "name": "name",
+                        "url": ""
+                    }
+                ]
+            }
         },
         "requestsDetail": [
             {
                 "requestId": 1,
-                "ids": [
-                    1
+                "productIds": [
+                    3
                 ]
             }
         ],
         "purchaseOrderProduct": [
             {
                 "item": {
-                    "id": 1,
-                    "itemName": "mouse",
-                    "itemType": "product",
-                    "unit": "each",
-                    "category": "tech",
-                    "supplier": "flipkart",
-                    "price": 12
+                    "id": 3,
+                    "details": {
+                        "itemName": "mouse",
+                        "itemType": "product",
+                        "unit": "each",
+                        "category": "tech",
+                        "price": 12,
+                        "imgUrl": "http://imgSynectiks.com",
+                        "status": "ACTIVE"
+                    }
                 },
                 "quantity": 2
             }
-        ]
+        ],
+        "quotation": {
+            "id": 1,
+            "details": {
+                "openDate": "01-01-2000",
+                "closingDate": "01-01-2000",
+                "requiredDeliveryDate": "01-01-2000",
+                "rfqType": "demo",
+                "location": "head office",
+                "note": "this is note",
+                "paymentTerms": "terms",
+                "paymentMode": "ABCD",
+                "incoterms": "ABCD",
+                "modeOfDelivery": "accountHolderName",
+                "status": "active",
+                "requestsDetail": [
+                    {
+                        "requestId": 1,
+                        "productIds": [
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "requestId": 2,
+                        "productIds": [
+                            1,
+                            2
+                        ]
+                    }
+                ],
+                "products": [
+                    {
+                        "item": {
+                            "id": 1,
+                            "details": {
+                                "itemName": "mouse",
+                                "price": 12,
+                                "unit": "each",
+                                "itemType": "product",
+                                "category": "tech"
+                            }
+                        },
+                        "quantity": 2
+                    },
+                    {
+                        "item": {
+                            "id": 1,
+                            "itemName": "mouse",
+                            "price": 12,
+                            "unit": "each",
+                            "itemType": "product",
+                            "category": "tech"
+                        },
+                        "quantity": 2
+                    }
+                ],
+                "document": [
+                    {
+                        "name": "name",
+                        "url": ""
+                    },
+                    {
+                        "name": "name",
+                        "url": ""
+                    },
+                    {
+                        "name": "name",
+                        "url": ""
+                    }
+                ]
+            }
+        }
     }
 }

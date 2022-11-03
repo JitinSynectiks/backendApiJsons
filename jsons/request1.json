@@ -11,7 +11,7 @@
         "location": "head office",
         "requestType": "purchase",
         "note": "This is note",
-        "status":"active",
+        "status": "active",
         "progressStage": "new",
         "totalAmount": 824,
         "department": "development",
@@ -33,58 +33,14 @@
             {
                 "item": {
                     "id": 3,
-                    "itemName": "mouse",
-                    "itemType": "product",
-                    "unit": "each",
-                    "category": "tech",
-                    "price": 12,
-                    "supplier": {
-                        "id": 2,
-                        "name": "raghav das",
-                        "email": "this@gmail.com",
-                        "contact": "+91 9876543210",
-                        "telephoneNo": "012-65432",
-                        "designationNo": "1233",
-                        "automateSending": "true",
-                        "city": "jaipur",
-                        "state": "rajasthan",
-                        "postalCode": "13468",
-                        "country": "USA",
-                        "paymentTerms": "terms",
-                        "category": "cat",
-                        "address": "Street no. B6, Miami",
-                        "status": "active",
-                        "company": {
-                            "name": "flipkart",
-                            "registrationNo": "123"
-                        },
-                        "bankDetails": {
-                            "accountHolderName": "jitin",
-                            "accountNo": "1234565789",
-                            "bank": "ABCD",
-                            "taxId": "DFS55465dFS",
-                            "currency": {
-                                "id": 1,
-                                "code": "USD",
-                                "name": "doller",
-                                "countryName": "USA",
-                                "countryCode": 1
-                            }
-                        },
-                        "document": [
-                            {
-                                "name": "name",
-                                "url": ""
-                            },
-                            {
-                                "name": "name",
-                                "url": ""
-                            },
-                            {
-                                "name": "name",
-                                "url": ""
-                            }
-                        ]
+                    "details": {
+                        "itemName": "mouse",
+                        "itemType": "product",
+                        "unit": "each",
+                        "category": "tech",
+                        "price": 12,
+                        "imgUrl": "http://imgSynectiks.com",
+                        "status": "ACTIVE"
                     }
                 },
                 "quantity": 1
@@ -92,58 +48,14 @@
             {
                 "item": {
                     "id": 2,
-                    "itemName": "hp laptop",
-                    "itemType": "product",
-                    "unit": "each",
-                    "category": "tech",
-                    "price": 800,
-                    "supplier": {
-                        "id": 1,
-                        "name": "andrew choudhary",
-                        "email": "this@gmail.com",
-                        "contact": "+91 9876543210",
-                        "telephoneNo": "012-65432",
-                        "designationNo": "1233",
-                        "automateSending": "true",
-                        "city": "jaipur",
-                        "state": "rajasthan",
-                        "postalCode": "13468",
-                        "country": "USA",
-                        "paymentTerms": "terms",
-                        "category": "cat",
-                        "address": "Street no. B6, Miami",
-                        "status": "active",
-                        "company": {
-                            "name": "amazone",
-                            "registrationNo": "123"
-                        },
-                        "bankDetails": {
-                            "accountHolderName": "jitin",
-                            "accountNo": "1234565789",
-                            "bank": "ABCD",
-                            "taxId": "DFS55465dFS",
-                            "currency": {
-                                "id": 1,
-                                "code": "USD",
-                                "name": "doller",
-                                "countryName": "USA",
-                                "countryCode": 1
-                            }
-                        },
-                        "document": [
-                            {
-                                "name": "name",
-                                "url": ""
-                            },
-                            {
-                                "name": "name",
-                                "url": ""
-                            },
-                            {
-                                "name": "name",
-                                "url": ""
-                            }
-                        ]
+                    "details": {
+                        "itemName": "hp laptop",
+                        "itemType": "product",
+                        "unit": "each",
+                        "category": "tech",
+                        "price": 800,
+                        "imgUrl": "http://imgSynectiks.com",
+                        "status": "ACTIVE"
                     }
                 },
                 "quantity": 1
