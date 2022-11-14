@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "details": {
+        "accountHolderName": "this is name",
+        "companyName": "company",
+        "country": "country",
+        "state": "state",
+        "emailAddress": "email@email.com",
+        "contactNo": "987654321",
+        "date": "01-01-1000",
+        "address": "address"
+    }
+}

@@ -5,7 +5,11 @@
         "createdOn": "01-01-2022",
         "updatedBy": "updater name",
         "updatedOn": "01-01-2022",
-        "approvedBy": "approverId",
+        "approvedBy": [
+            "approverId1",
+            "approverId2",
+            "approverId3"
+        ],
         "approvedOn": "01-01-2022",
         "desiredDate": "01-01-2022",
         "location": "head office",
