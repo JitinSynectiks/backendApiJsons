@@ -80,7 +80,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 36,\r\n    \"role\": \"admin\",\r\n    \"price\": 104\r\n}",
+							"raw": "{\r\n    \"id\": 36,\r\n    \"role\": \"adlkmin\",\r\n    \"price\": 104\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -108,23 +108,11 @@
 				},
 				{
 					"name": "searchRequest",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"state\": \"pending\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request",
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request?createdBy=Jitin",
 							"protocol": "https",
 							"host": [
 								"u4kzlb58qh",
@@ -136,6 +124,17 @@
 							"path": [
 								"procurement-dev",
 								"request"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "58",
+									"disabled": true
+								},
+								{
+									"key": "createdBy",
+									"value": "Jitin"
+								}
 							]
 						}
 					},
@@ -524,7 +523,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"code\": \"USD\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -544,6 +543,13 @@
 							"path": [
 								"procurement-dev",
 								"currency"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -652,21 +658,9 @@
 				},
 				{
 					"name": "searchInvoice",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n   \"amount\": 24\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/invoice",
 							"protocol": "https",
@@ -680,6 +674,23 @@
 							"path": [
 								"procurement-dev",
 								"invoice"
+							],
+							"query": [
+								{
+									"key": "issueDate",
+									"value": "15-01-2022",
+									"disabled": true
+								},
+								{
+									"key": "amount",
+									"value": "24",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -729,7 +740,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n        \"requesterId\": 1,\r\n        \"fromDate\": \"01-01-2022\",\r\n        \"toDate\": \"02-01-2022\",\r\n        \"createdOn\": \"03-01-2022\",\r\n        \"updatedOn\": \"05-01-2022\",\r\n        \"createdBy\": \"Creater Name\",\r\n        \"updatedBy\": \"Updater Name\",\r\n        \"deliveryDate\": \"10-01-2022\",\r\n        \"status\": \"Pending | Unpaid | Undelivered | Delivered\",\r\n        \"totalNumberOfProduct\": \"3\",\r\n        \"totalAmount\": 824,\r\n        \"paymentTerm\": \"30 Net\",\r\n        \"shippingMethod\": \"Store Pickup\",\r\n        \"paymentWith\": \"Credit card\",\r\n        \"shippingTerms\": \"FOB\",\r\n        \"notes\": \"this is notes for Purchase Order\",\r\n        \"supplier\": {\r\n            \"id\": 1,\r\n            \"name\": \"andrew choudhary\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"contact\": \"+91 9876543210\",\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\",\r\n            \"city\": \"jaipur\",\r\n            \"state\": \"rajasthan\",\r\n            \"postalCode\": \"13468\",\r\n            \"country\": \"USA\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"category\": \"cat\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"status\": \"active\",\r\n            \"company\": {\r\n                \"name\": \"amazone\",\r\n                \"registrationNo\": \"123\"\r\n            },\r\n            \"bankDetails\": {\r\n                \"accountHolderName\": \"jitin\",\r\n                \"accountNo\": \"1234565789\",\r\n                \"bank\": \"ABCD\",\r\n                \"taxId\": \"DFS55465dFS\",\r\n                \"currency\": {\r\n                    \"id\": 1,\r\n                    \"code\": \"USD\",\r\n                    \"name\": \"doller\",\r\n                    \"countryName\": \"USA\",\r\n                    \"countryCode\": 1\r\n                }\r\n            },\r\n            \"document\": [\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"requestsDetail\": [\r\n            {\r\n                \"requestId\": 1,\r\n                \"ids\": [\r\n                    2\r\n                ]\r\n            },\r\n            {\r\n                \"requestId\": 2,\r\n                \"ids\": [\r\n                    1\r\n                ]\r\n            }\r\n        ],\r\n        \"purchaseOrderProducts\": [\r\n            {\r\n                \"item\": {\r\n                    \"id\": 2,\r\n                    \"itemName\": \"hp laptop\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"category\": \"tech\",\r\n                    \"price\": 800\r\n                },\r\n                \"quantity\": 1\r\n            },\r\n            {\r\n                \"item\": {\r\n                    \"id\": 1,\r\n                    \"itemName\": \"mouse\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"category\": \"tech\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"price\": 12\r\n                },\r\n                \"quantity\": 2\r\n            }\r\n        ]\r\n    }",
+							"raw": " {\r\n        \"requesterId\": 1,\r\n        \"fromDate\": \"01-01-2022\",\r\n        \"toDate\": \"02-01-2022\",\r\n        \"createdOn\": \"03-01-2022\",\r\n        \"updatedOn\": \"05-01-2022\",\r\n        \"createdBy\": \"Creater Name\",\r\n        \"updatedBy\": \"Updater Name\",\r\n        \"deliveryDate\": \"10-01-2022\",\r\n        \"status\": \"Pending | Unpaid | Undelivered | Delivered\",\r\n        \"totalNumberOfProduct\": \"3\",\r\n        \"totalAmount\": 824,\r\n        \"paymentTerm\": \"30 Net\",\r\n        \"shippingMethod\": \"Store Pickup\",\r\n        \"paymentWith\": \"Credit card\",\r\n        \"shippingTerms\": \"FOB\",\r\n        \"notes\": \"notes sample\",\r\n        \"supplier\": {\r\n            \"id\": 1,\r\n            \"name\": \"andrew choudhary\",\r\n            \"email\": \"this@gmail.com\",\r\n            \"contact\": \"+91 9876543210\",\r\n            \"telephoneNo\": \"012-65432\",\r\n            \"designationNo\": \"1233\",\r\n            \"automateSending\": \"true\",\r\n            \"city\": \"jaipur\",\r\n            \"state\": \"rajasthan\",\r\n            \"postalCode\": \"13468\",\r\n            \"country\": \"USA\",\r\n            \"paymentTerms\": \"terms\",\r\n            \"category\": \"cat\",\r\n            \"address\": \"Street no. B6, Miami\",\r\n            \"status\": \"active\",\r\n            \"company\": {\r\n                \"name\": \"amazone\",\r\n                \"registrationNo\": \"123\"\r\n            },\r\n            \"bankDetails\": {\r\n                \"accountHolderName\": \"jitin\",\r\n                \"accountNo\": \"1234565789\",\r\n                \"bank\": \"ABCD\",\r\n                \"taxId\": \"DFS55465dFS\",\r\n                \"currency\": {\r\n                    \"id\": 1,\r\n                    \"code\": \"USD\",\r\n                    \"name\": \"doller\",\r\n                    \"countryName\": \"USA\",\r\n                    \"countryCode\": 1\r\n                }\r\n            },\r\n            \"document\": [\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                },\r\n                {\r\n                    \"name\": \"name\",\r\n                    \"url\": \"\"\r\n                }\r\n            ]\r\n        },\r\n        \"requestsDetail\": [\r\n            {\r\n                \"requestId\": 1,\r\n                \"ids\": [\r\n                    2\r\n                ]\r\n            },\r\n            {\r\n                \"requestId\": 2,\r\n                \"ids\": [\r\n                    1\r\n                ]\r\n            }\r\n        ],\r\n        \"purchaseOrderProducts\": [\r\n            {\r\n                \"item\": {\r\n                    \"id\": 2,\r\n                    \"itemName\": \"hp laptop\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"category\": \"tech\",\r\n                    \"price\": 800\r\n                },\r\n                \"quantity\": 1\r\n            },\r\n            {\r\n                \"item\": {\r\n                    \"id\": 1,\r\n                    \"itemName\": \"mouse\",\r\n                    \"itemType\": \"product\",\r\n                    \"unit\": \"each\",\r\n                    \"category\": \"tech\",\r\n                    \"supplier\": \"amazone\",\r\n                    \"price\": 12\r\n                },\r\n                \"quantity\": 2\r\n            }\r\n        ]\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -984,6 +995,278 @@
 							"path": [
 								"procurement-dev",
 								"quotation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Approvers",
+			"item": [
+				{
+					"name": "addApprovers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"allApprovers\": [\r\n            {\r\n                \"userId\": \"Axiu2818\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"0\"\r\n            },\r\n            {\r\n                \"userId\": \"uxiu281fdf8\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"1\"\r\n            },\r\n            {\r\n                \"userId\": \"bhiu2818\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"2\"\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"approvers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteApprovers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"approvers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchApprovers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rfqType\": \"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"approvers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateApprovers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"details\": {\r\n        \"allApprovers\": [\r\n            {\r\n                \"userId\": \"123456789\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"0\"\r\n            },\r\n            {\r\n                \"userId\": \"uxiu281fdf8\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"1\"\r\n            },\r\n            {\r\n                \"userId\": \"bhiu2818\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"2\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"approvers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CompanyProfile",
+			"item": [
+				{
+					"name": "addCompanyProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountHolderName\": \"this is name\",\r\n    \"companyName\": \"company\",\r\n    \"country\": \"country\",\r\n    \"state\": \"state\",\r\n    \"emailAddress\": \"email@email.com\",\r\n    \"contactNo\": \"987654321\",\r\n    \"date\": \"01-01-1000\",\r\n    \"address\": \"address\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"company_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCompanyProfile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"company_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchCompanyProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rfqType\": \"demo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"company_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCompanyProfile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"details\": {\r\n        \"accountHolderName\": \"this is updated name\",\r\n        \"companyName\": \"company\",\r\n        \"country\": \"country\",\r\n        \"state\": \"state\",\r\n        \"emailAddress\": \"email@email.com\",\r\n        \"contactNo\": \"987654321\",\r\n        \"date\": \"01-01-1000\",\r\n        \"address\": \"address\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"company_profile"
 							]
 						}
 					},

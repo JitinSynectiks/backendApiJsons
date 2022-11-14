@@ -1,26 +1,28 @@
 {
     "id": 1,
-    "details": [
-        {
-            "userId": "Axiu2818",
-            "minAmount": "100",
-            "maxAmount": "500",
-            "location": "N. virginia",
-            "order": "0"
-        },
-        {
-            "userId": "uxiu281fdf8",
-            "minAmount": "100",
-            "maxAmount": "500",
-            "location": "N. virginia",
-            "order": "1"
-        },
-        {
-            "userId": "bhiu2818",
-            "minAmount": "100",
-            "maxAmount": "500",
-            "location": "N. virginia",
-            "order": "2"
-        }
-    ]
+    "details": {
+        "allApprovers": [
+            {
+                "userId": "Axiu2818",
+                "minAmount": "100",
+                "maxAmount": "500",
+                "location": "N. virginia",
+                "order": "0"
+            },
+            {
+                "userId": "uxiu281fdf8",
+                "minAmount": "100",
+                "maxAmount": "500",
+                "location": "N. virginia",
+                "order": "1"
+            },
+            {
+                "userId": "bhiu2818",
+                "minAmount": "100",
+                "maxAmount": "500",
+                "location": "N. virginia",
+                "order": "2"
+            }
+        ]
+    }
 }
