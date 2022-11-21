@@ -80,7 +80,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 36,\r\n    \"role\": \"adlkmin\",\r\n    \"price\": 104\r\n}",
+							"raw": "{\r\n    \"id\": 78,\r\n    \"approver\": \"uxiu281fdf8\",\r\n    \"price\": 200\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1079,7 +1079,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"rfqType\": \"demo\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1267,6 +1267,43 @@
 							"path": [
 								"procurement-dev",
 								"company_profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SendEmail",
+			"item": [
+				{
+					"name": "addCompanyProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\":[\"jkg335819@gmail.com\"],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/send_email",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"send_email"
 							]
 						}
 					},
