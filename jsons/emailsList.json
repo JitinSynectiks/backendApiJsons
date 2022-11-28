@@ -1,0 +1,24 @@
+{
+    "id": 1,
+    "details": {
+        "from": "this@gmail.com",
+        "emails": [
+            {
+                "to": [
+                    "this1@gmial.com",
+                    "this2@gmail.com"
+                ],
+                "content": "this is content",
+                "subject": "this is subject"
+            },
+            {
+                "to": [
+                    "this1@gmial.com",
+                    "this2@gmail.com"
+                ],
+                "content": "this is content",
+                "subject": "this is subject"
+            }
+        ]
+    }
+}
