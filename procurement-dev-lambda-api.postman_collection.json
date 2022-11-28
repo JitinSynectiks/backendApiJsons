@@ -1278,13 +1278,13 @@
 			"name": "SendEmail",
 			"item": [
 				{
-					"name": "addCompanyProfile",
+					"name": "sendEmail",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"from\": \"abc@gmail.com\",\r\n    \"to\":[\"abc@gmail.com\", \"abc@gmail.com\"],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject\"\r\n}",
+							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\": [\r\n        \"jkg335819@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1292,7 +1292,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/send_email",
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/email",
 							"protocol": "https",
 							"host": [
 								"u4kzlb58qh",
@@ -1303,7 +1303,48 @@
 							],
 							"path": [
 								"procurement-dev",
-								"send_email"
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSentEmails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\": [\r\n        \"jkg335819@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/email?from=jkgoyal85@gmail.com",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"email"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "jkgoyal85@gmail.com"
+								}
 							]
 						}
 					},
