@@ -1223,7 +1223,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile",
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile?=",
 							"protocol": "https",
 							"host": [
 								"u4kzlb58qh",
@@ -1235,6 +1235,12 @@
 							"path": [
 								"procurement-dev",
 								"company_profile"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
 							]
 						}
 					},
@@ -1284,7 +1290,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\": [\r\n        \"jkg335819@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\"\r\n}",
+							"raw": "{\r\n    \"from\": \"abc@gmail.com\",\r\n    \"to\": [\r\n        \"abc@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\",\r\n    \"attachment\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROR0O2H-FusQQa0AetWhBuspFurVB7p4DAkiq9sZ8&s\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
