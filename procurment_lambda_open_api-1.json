@@ -2157,6 +2157,544 @@
                 ],
                 "parameters": []
             }
+        },
+        "/company_profile": {
+            "get": {
+                "summary": "Details of company_profile",
+                "operationId": "getcompany_profile",
+                "tags": [
+                    "company_profile"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "search company_profile is used to get the list of the company_profile.",
+                        "headers": {
+                            "x-next": {
+                                "description": "company_profile List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch company_profile successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/companyProfile"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add company_profile",
+                "operationId": "addcompany_profile",
+                "requestBody": {
+                    "description": "add new company_profile",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/companyProfile"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add company_profile successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add company_profile Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "company_profile"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit company_profile Detail",
+                "operationId": "updatecompany_profile",
+                "requestBody": {
+                    "description": "update company_profile is used for modifing company_profile",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/companyProfile"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit company_profile",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit company_profile Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "company_profile"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "detail about delete company_profile",
+                "operationId": "deletecompany_profile",
+                "requestBody": {
+                    "description": "delete company_profile",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete company_profile is use for delete company_profile by id",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete company_profile ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete company_profile Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "company_profile"
+                ],
+                "parameters": []
+            }
+        },
+        "/approvers": {
+            "get": {
+                "summary": "Details of approvers",
+                "operationId": "getapprovers",
+                "tags": [
+                    "approvers"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "search approvers is used to get the list of the approvers.",
+                        "headers": {
+                            "x-next": {
+                                "description": "approvers List",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Fetch approvers successfully"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "object": {
+                                            "type": "array",
+                                            "x-count": 7,
+                                            "items": {
+                                                "$ref": "#/components/schemas/approvers"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add approvers list",
+                "operationId": "addapprovers",
+                "requestBody": {
+                    "description": "add new approvers. only one list of approvers can exist",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/approvers"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Add approvers successfully",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "add approvers Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "approvers"
+                ],
+                "parameters": []
+            },
+            "put": {
+                "summary": "Edit approvers Detail",
+                "operationId": "updateapprovers",
+                "requestBody": {
+                    "description": "update approvers is used for modifing approvers",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "items": {
+                                    "$ref": "#/components/schemas/approvers"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {
+                            "x-next": {
+                                "description": "Edit approvers",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Edit approvers Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "approvers"
+                ],
+                "parameters": []
+            },
+            "delete": {
+                "summary": "delete approvers list",
+                "operationId": "deleteapprovers",
+                "requestBody": {
+                    "description": "delete approvers list",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Delete approvers is use for delete approvers list",
+                        "headers": {
+                            "x-next": {
+                                "description": "Delete approvers ",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "code": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 200, \"max\": 200 })"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "default": "Delete approvers Successfully"
+                                        },
+                                        "type": {
+                                            "type": "string",
+                                            "default": "SUCCESS"
+                                        },
+                                        "object": {}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Error"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "approvers"
+                ],
+                "parameters": []
+            }
         }
     },
     "components": {
@@ -2446,6 +2984,62 @@
                     }
                 }
             },
+            "companyProfile": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the company profile"
+                    },
+                    "details": {
+                        "type": "object",
+                        "properties": {
+                            "accountHolderName": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of accountHolder"
+                            },
+                            "companyName": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of company"
+                            },
+                            "country": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of country"
+                            },
+                            "state": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "name of state"
+                            },
+                            "emailAddress": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "emailAddress of company"
+                            },
+                            "contactNo": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "contactNo of company"
+                            },
+                            "date": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "date of profile creation"
+                            },
+                            "address": {
+                                "type": "string",
+                                "x-faker": "{{commerce.productName}}",
+                                "description": "address of company"
+                            }
+                        }
+                    }
+                }
+            },
             "supplier": {
                 "type": "object",
                 "properties": {
@@ -2666,6 +3260,79 @@
                         "type": "object",
                         "item": {
                             "$ref": "#/components/schemas/currency"
+                        }
+                    }
+                }
+            },
+            "approvers": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64",
+                        "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                        "description": "id of the Requisition"
+                    },
+                    "details": {
+                        "type": "object",
+                        "properties": {
+                           
+                            "allApprovers": {
+                                "type": "array",
+                                "x-count": 2,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "userId": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                            "description": "id of the user"
+                                        },
+                                        "minAmount": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                            "description": "minAmount for approval access"
+                                        },
+                                        "maxAmount": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                            "description": "maxAmount for approval access"
+                                        },
+                                        "location": {
+                                            "type": "string",
+                                            "x-faker": "{{commerce.productName}}",
+                                            "description": "location of approval"
+                                        },
+                                        "order": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                            "description": "order of the approver for approval"
+                                        }
+                                    }
+                                }
+                            },
+                            "products": {
+                                "type": "array",
+                                "x-count": 2,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "item": {
+                                            "$ref": "#/components/schemas/product"
+                                        },
+                                        "quantity": {
+                                            "type": "integer",
+                                            "format": "int64",
+                                            "x-faker": "datatype.number({ \"min\": 1, \"max\": 100000 })",
+                                            "description": "quantity of item"
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }

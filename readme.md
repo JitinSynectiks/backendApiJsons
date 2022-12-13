@@ -3002,6 +3002,393 @@ TODO
 ```
 
 
+## **Approvers-Entity**
+```json
+
+{
+    "allApprovers": [
+        {
+            "userId": "Axiu2818",
+            "minAmount": "100",
+            "maxAmount": "500",
+            "location": "N. virginia",
+            "order": "0"
+        },
+        {
+            "userId": "uxiu281fdf8",
+            "minAmount": "100",
+            "maxAmount": "500",
+            "location": "N. virginia",
+            "order": "1"
+        },
+        {
+            "userId": "bhiu2818",
+            "minAmount": "100",
+            "maxAmount": "500",
+            "location": "N. virginia",
+            "order": "2"
+        }
+    ]
+}
+
+```
+  
+## **approvers**
+    End Points
+        POST /approvers
+        PUT  /approvers
+        GET  /approvers
+        DELETE /approvers
+
+**/approvers**
+
+Api to create approvers list ( There can only be one list of approver ). 
+
+```json
+    Method: POST
+    Request Body:
+       {
+            "allApprovers": [
+                {
+                    "userId": "Axiu2818",
+                    "minAmount": "100",
+                    "maxAmount": "500",
+                    "location": "N. virginia",
+                    "order": "0"
+                },
+                {
+                    "userId": "uxiu281fdf8",
+                    "minAmount": "100",
+                    "maxAmount": "500",
+                    "location": "N. virginia",
+                    "order": "1"
+                },
+                {
+                    "userId": "bhiu2818",
+                    "minAmount": "100",
+                    "maxAmount": "500",
+                    "location": "N. virginia",
+                    "order": "2"
+                }
+            ]
+        }
+    Response:
+    {
+        "code": 200,
+        "message": "added successfully",
+        "type": "object",
+        "object": []
+    }
+```
+		
+
+*CURL*
+```json
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "allApprovers": [
+        {
+            "userId": "Axiu2818",
+            "minAmount": "100",
+            "maxAmount": "500",
+            "location": "N. virginia",
+            "order": "0"
+        },
+        {
+            "userId": "uxiu281fdf8",
+            "minAmount": "100",
+            "maxAmount": "500",
+            "location": "N. virginia",
+            "order": "1"
+        },
+        {
+            "userId": "bhiu2818",
+            "minAmount": "100",
+            "maxAmount": "500",
+            "location": "N. virginia",
+            "order": "2"
+        }
+    ]
+}'
+```
+**/approvers**
+
+Api to update approvers. It is used for add a new approver or remove approver.
+
+```json
+	Method: PUT
+    Request Body:
+       {
+            "id": 17,
+            "details": {
+                "allApprovers": [
+                    {
+                        "userId": "123456789",
+                        "minAmount": "100",
+                        "maxAmount": "500",
+                        "location": "N. virginia",
+                        "order": "0"
+                    },
+                    {
+                        "userId": "uxiu281fdf8",
+                        "minAmount": "100",
+                        "maxAmount": "500",
+                        "location": "N. virginia",
+                        "order": "1"
+                    }
+                ]
+            }
+        }
+	Response:
+		{
+            "code": 200,
+            "message": "successfully updated",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+curl --location --request PUT 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 17,
+    "details": {
+        "allApprovers": [
+            {
+                "userId": "123456789",
+                "minAmount": "100",
+                "maxAmount": "500",
+                "location": "N. virginia",
+                "order": "0"
+            },
+            {
+                "userId": "uxiu281fdf8",
+                "minAmount": "100",
+                "maxAmount": "500",
+                "location": "N. virginia",
+                "order": "1"
+            }
+        ]
+    }
+}'
+```
+**/approvers**
+
+Api to search approvers.
+
+```json
+	Method: GET
+    Request Body:
+        { "Key" : "value for search" }
+	Response:
+		{
+            "code": 200,
+            "message": "search successfully",
+            "type": "object",
+            "object": [ *Array of resultant objects* ]
+        } 
+```
+
+*CURL*
+```json
+curl --location --request GET 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers' \
+--data-raw ''
+```
+**/approvers**
+
+Api to delete approvers. It'll delete all approvers.
+
+```json 
+	Method: DELETE
+	Request Body:
+        { "id" : 1 }
+	Response:
+		{
+            "code": 200,
+            "message": "approvers delete successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+```json 
+curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/approvers' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":16
+}'
+```
+
+
+## **company_profile-Entity**
+```json
+{
+    "accountHolderName": "This is name",
+    "companyName": "company",
+    "country": "country",
+    "state": "state",
+    "emailAddress": "email@email.com",
+    "contactNo": "987654321",
+    "date": "01-01-1000",
+    "address": "address"
+}
+```
+  
+## **company_profile**
+    End Points
+        POST /company_profile
+        PUT  /company_profile
+        GET  /company_profile
+        DELETE /company_profile
+
+**/company_profile**
+
+Api to create company_profile.
+
+```json
+    Method: POST
+    Request Body:
+       {
+            "accountHolderName": "This is name",
+            "companyName": "company",
+            "country": "country",
+            "state": "state",
+            "emailAddress": "email@email.com",
+            "contactNo": "987654321",
+            "date": "01-01-1000",
+            "address": "address"
+        }
+    Response:
+    {
+        "code": 200,
+        "message": "added successfully",
+        "type": "object",
+        "object": []
+    }
+```
+		
+
+*CURL*
+
+```json
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "accountHolderName": "This is name",
+    "companyName": "company",
+    "country": "country",
+    "state": "state",
+    "emailAddress": "email@email.com",
+    "contactNo": "987654321",
+    "date": "01-01-1000",
+    "address": "address"
+}'
+```
+
+**/company_profile**
+
+Api to update company_profile.
+```json
+	Method: PUT
+    Request Body:
+        {
+            "id": 2,
+            "details": {
+                "accountHolderName": "this is updated name",
+                "companyName": "company",
+                "country": "country",
+                "state": "state",
+                "emailAddress": "email@email.com",
+                "contactNo": "987654321",
+                "date": "01-01-1000",
+                "address": "address"
+            }
+        }   
+	Response:
+		{
+            "code": 200,
+            "message": "successfully updated",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+ curl --location --request PUT 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 2,
+    "details": {
+        "accountHolderName": "this is updated name",
+        "companyName": "company",
+        "country": "country",
+        "state": "state",
+        "emailAddress": "email@email.com",
+        "contactNo": "987654321",
+        "date": "01-01-1000",
+        "address": "address"
+    }
+}'
+```
+**/company_profile**
+
+Api to search company_profile.
+
+```json
+	Method: GET
+    Request Body:
+        { "Key" : "value for search" }
+	Response:
+		{
+            "code": 200,
+            "message": "search successfully",
+            "type": "object",
+            "object": [ *Array of resultant objects* ]
+        } 
+```
+
+*CURL*
+```json
+curl --location --request GET 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile?=' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "rfqType": "demo"
+}'
+```
+**/company_profile**
+
+Api to delete company_profile.
+
+```json 
+	Method: DELETE
+	Request Body:
+        { "id" : 1 }
+	Response:
+		{
+            "code": 200,
+            "message": "delete successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+```json 
+curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/company_profile' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":1
+}'
+```
+
+
 
 
 

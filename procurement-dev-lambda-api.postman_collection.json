@@ -112,7 +112,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request?createdBy=Jitin",
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request",
 							"protocol": "https",
 							"host": [
 								"u4kzlb58qh",
@@ -130,10 +130,6 @@
 									"key": "id",
 									"value": "58",
 									"disabled": true
-								},
-								{
-									"key": "createdBy",
-									"value": "Jitin"
 								}
 							]
 						}
@@ -482,6 +478,39 @@
 					"response": []
 				},
 				{
+					"name": "deactivateCurrency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/currency/deactivate",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"currency",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "deleteCurrency",
 					"request": {
 						"method": "DELETE",
@@ -619,6 +648,39 @@
 							"path": [
 								"procurement-dev",
 								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deactivateInvoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":120\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/invoice/deactivate",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"invoice",
+								"deactivate"
 							]
 						}
 					},
@@ -766,6 +828,39 @@
 					"response": []
 				},
 				{
+					"name": "deactivatePurchaseOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/purchase_order/deactivate",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"purchase_order",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "deletePurchaseOrder",
 					"request": {
 						"method": "DELETE",
@@ -807,7 +902,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -902,6 +997,39 @@
 					"response": []
 				},
 				{
+					"name": "deactivateQuotation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":71\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation/deactivate",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"quotation",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "deleteQuotation",
 					"request": {
 						"method": "DELETE",
@@ -943,7 +1071,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"rfqType\": \"demo\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -951,7 +1079,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation",
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation?id=71",
 							"protocol": "https",
 							"host": [
 								"u4kzlb58qh",
@@ -963,6 +1091,12 @@
 							"path": [
 								"procurement-dev",
 								"quotation"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "71"
+								}
 							]
 						}
 					},
@@ -1012,7 +1146,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n        \"allApprovers\": [\r\n            {\r\n                \"userId\": \"Axiu2818\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"0\"\r\n            },\r\n            {\r\n                \"userId\": \"uxiu281fdf8\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"1\"\r\n            },\r\n            {\r\n                \"userId\": \"bhiu2818\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"2\"\r\n            }\r\n        ]\r\n    }",
+							"raw": "{\r\n    \"allApprovers\": [\r\n        {\r\n            \"userId\": \"Axiu2818\",\r\n            \"minAmount\": \"100\",\r\n            \"maxAmount\": \"500\",\r\n            \"location\": \"N. virginia\",\r\n            \"order\": \"0\"\r\n        },\r\n        {\r\n            \"userId\": \"uxiu281fdf8\",\r\n            \"minAmount\": \"100\",\r\n            \"maxAmount\": \"500\",\r\n            \"location\": \"N. virginia\",\r\n            \"order\": \"1\"\r\n        },\r\n        {\r\n            \"userId\": \"bhiu2818\",\r\n            \"minAmount\": \"100\",\r\n            \"maxAmount\": \"500\",\r\n            \"location\": \"N. virginia\",\r\n            \"order\": \"2\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1038,13 +1172,13 @@
 					"response": []
 				},
 				{
-					"name": "deleteApprovers",
+					"name": "deleteAllApprovers",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":1\r\n\r\n}",
+							"raw": "{\r\n    \"id\":17\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1099,6 +1233,13 @@
 							"path": [
 								"procurement-dev",
 								"approvers"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "2",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -1111,7 +1252,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 3,\r\n    \"details\": {\r\n        \"allApprovers\": [\r\n            {\r\n                \"userId\": \"123456789\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"0\"\r\n            },\r\n            {\r\n                \"userId\": \"uxiu281fdf8\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"1\"\r\n            },\r\n            {\r\n                \"userId\": \"bhiu2818\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"2\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"id\": 17,\r\n    \"details\": {\r\n        \"allApprovers\": [\r\n            {\r\n                \"userId\": \"123456789\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"0\"\r\n            },\r\n            {\r\n                \"userId\": \"uxiu281fdf8\",\r\n                \"minAmount\": \"100\",\r\n                \"maxAmount\": \"500\",\r\n                \"location\": \"N. virginia\",\r\n                \"order\": \"1\"\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1148,7 +1289,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"accountHolderName\": \"this is name\",\r\n    \"companyName\": \"company\",\r\n    \"country\": \"country\",\r\n    \"state\": \"state\",\r\n    \"emailAddress\": \"email@email.com\",\r\n    \"contactNo\": \"987654321\",\r\n    \"date\": \"01-01-1000\",\r\n    \"address\": \"address\"\r\n}",
+							"raw": "{\r\n    \"accountHolderName\": \"This is name\",\r\n    \"companyName\": \"company\",\r\n    \"country\": \"country\",\r\n    \"state\": \"state\",\r\n    \"emailAddress\": \"email@email.com\",\r\n    \"contactNo\": \"987654321\",\r\n    \"date\": \"01-01-1000\",\r\n    \"address\": \"address\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1290,7 +1431,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"from\": \"abc@gmail.com\",\r\n    \"to\": [\r\n        \"abc@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\",\r\n    \"attachment\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROR0O2H-FusQQa0AetWhBuspFurVB7p4DAkiq9sZ8&s\"\r\n}",
+							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\": [\r\n        \"goyalpawan357@gmail.com\",\r\n        \"riteshgarg416@gmail.com\",\r\n        \"sandeepjiswami@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\",\r\n    \"attachment\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROR0O2H-FusQQa0AetWhBuspFurVB7p4DAkiq9sZ8&s\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
