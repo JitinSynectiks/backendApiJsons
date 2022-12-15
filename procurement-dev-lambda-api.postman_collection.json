@@ -107,6 +107,39 @@
 					"response": []
 				},
 				{
+					"name": "deactivate request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 78\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request/deactivate",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"request",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "searchRequest",
 					"request": {
 						"method": "GET",
@@ -200,6 +233,39 @@
 							"path": [
 								"procurement-dev",
 								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deactivateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/product/deactivate",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"product",
+								"deactivate"
 							]
 						}
 					},
@@ -336,6 +402,39 @@
 							"path": [
 								"procurement-dev",
 								"supplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deactivateSupplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/supplier/deactivate",
+							"protocol": "https",
+							"host": [
+								"u4kzlb58qh",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"procurement-dev",
+								"supplier",
+								"deactivate"
 							]
 						}
 					},

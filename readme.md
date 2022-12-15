@@ -703,7 +703,12 @@ Api to request deactivation.
 *CURL*
 
 ```json
-TODO
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/request/deactivate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 75
+}
+'
 ```
 
 
@@ -1127,7 +1132,11 @@ Api to product deactivation.
 *CURL*
 
 ```json
-TODO
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/product/deactivate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 5
+}'
 ```
 
 
@@ -1503,7 +1512,11 @@ Api to supplier deactivation.
 *CURL*
 
 ```json
-TODO
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/supplier/deactivate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 11
+}'
 ```
 
 
@@ -1673,7 +1686,11 @@ Api to currency deactivation.
 *CURL*
 
 ```json
-TODO
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/currency/deactivate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "id":2
+}'
 ```
 
 ## **Invoice-Entity**
@@ -2327,7 +2344,11 @@ Api to invoice deactivation.
 *CURL*
 
 ```json
-TODO
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/invoice/deactivate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":120
+}'
 ```
 
 
@@ -2998,9 +3019,815 @@ Api to purchase_order deactivation.
 *CURL*
 
 ```json
-TODO
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/purchase_order/deactivate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":5
+}'
 ```
 
+
+## **quotation-Entity**
+```json
+{
+    "id": 1,
+    "details": {
+        "openDate": "01-01-2000",
+        "closingDate": "01-01-2000",
+        "requiredDeliveryDate": "01-01-2000",
+        "rfqType": "demo",
+        "location": "head office",
+        "note": "this is note",
+        "paymentTerms": "terms",
+        "paymentMode": "ABCD",
+        "incoterms": "ABCD",
+        "modeOfDelivery": "accountHolderName",
+        "status": "active",
+        "requestsDetail": [
+            {
+                "requestId": 1,
+                "productIds": [
+                    2,
+                    3
+                ]
+            },
+            {
+                "requestId": 2,
+                "productIds": [
+                    1,
+                    2
+                ]
+            }
+        ],
+        "products": [
+            {
+                "item": {
+                    "id": 1,
+                    "details": {
+                        "itemName": "mouse",
+                        "price": 12,
+                        "unit": "each",
+                        "itemType": "product",
+                        "category": "tech"
+                    }
+                },
+                "quantity": 2
+            },
+            {
+                "item": {
+                    "id": 1,
+                    "itemName": "mouse",
+                    "price": 12,
+                    "unit": "each",
+                    "itemType": "product",
+                    "category": "tech"
+                },
+                "quantity": 2
+            }
+        ],
+        "document": [
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            }
+        ]
+    }
+}
+
+```
+  
+## **quotation**
+    End Points
+        POST /quotation
+        PUT  /quotation
+        GET  /quotation
+        DELETE /quotation
+
+**/quotation**
+
+Api to create quotation.
+
+```json
+    Method: POST
+    Request Body:
+       {
+            "openDate": "01-01-2000",
+            "closingDate": "01-01-2000",
+            "requiredDeliveryDate": "01-01-2000",
+            "rfqType": "this",
+            "location": "head office",
+            "note": "this is note",
+            "products": [
+                {
+                    "item": {
+                        "id": 1,
+                        "details": {
+                            "itemName": "mouse",
+                            "price": 12,
+                            "unit": "each",
+                            "itemType": "product",
+                            "category": "tech",
+                            "supplier": {
+                                "id": 1,
+                                "name": "andrew choudhary",
+                                "email": "this@gmail.com",
+                                "contact": "+91 9876543210",
+                                "telephoneNo": "012-65432",
+                                "designationNo": "1233",
+                                "automateSending": "true",
+                                "city": "jaipur",
+                                "state": "rajasthan",
+                                "postalCode": "13468",
+                                "country": "USA",
+                                "paymentTerms": "terms",
+                                "category": "cat",
+                                "address": "Street no. B6, Miami",
+                                "status": "active",
+                                "company": {
+                                    "name": "amazone",
+                                    "registrationNo": "123"
+                                },
+                                "bankDetails": {
+                                    "accountHolderName": "jitin",
+                                    "accountNo": "1234565789",
+                                    "bank": "ABCD",
+                                    "taxId": "DFS55465dFS",
+                                    "currency": {
+                                        "id": 1,
+                                        "code": "USD",
+                                        "name": "doller",
+                                        "countryName": "USA",
+                                        "countryCode": 1
+                                    }
+                                },
+                                "document": [
+                                    {
+                                        "name": "name",
+                                        "url": ""
+                                    },
+                                    {
+                                        "name": "name",
+                                        "url": ""
+                                    },
+                                    {
+                                        "name": "name",
+                                        "url": ""
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "quantity": 2
+                },
+                {
+                    "item": {
+                        "id": 1,
+                        "itemName": "mouse",
+                        "price": 12,
+                        "unit": "each",
+                        "itemType": "product",
+                        "category": "tech",
+                        "supplier": {
+                            "id": 1,
+                            "name": "andrew choudhary",
+                            "email": "this@gmail.com",
+                            "contact": "+91 9876543210",
+                            "telephoneNo": "012-65432",
+                            "designationNo": "1233",
+                            "automateSending": "true",
+                            "city": "jaipur",
+                            "state": "rajasthan",
+                            "postalCode": "13468",
+                            "country": "USA",
+                            "paymentTerms": "terms",
+                            "category": "cat",
+                            "address": "Street no. B6, Miami",
+                            "status": "active",
+                            "company": {
+                                "name": "amazone",
+                                "registrationNo": "123"
+                            },
+                            "bankDetails": {
+                                "accountHolderName": "jitin",
+                                "accountNo": "1234565789",
+                                "bank": "ABCD",
+                                "taxId": "DFS55465dFS",
+                                "currency": {
+                                    "id": 1,
+                                    "code": "USD",
+                                    "name": "doller",
+                                    "countryName": "USA",
+                                    "countryCode": 1
+                                }
+                            },
+                            "document": [
+                                {
+                                    "name": "name",
+                                    "url": ""
+                                },
+                                {
+                                    "name": "name",
+                                    "url": ""
+                                },
+                                {
+                                    "name": "name",
+                                    "url": ""
+                                }
+                            ]
+                        }
+                    },
+                    "quantity": 2
+                }
+            ],
+            "paymentTerms": "terms",
+            "paymentMode": "ABCD",
+            "incoterms": "ABCD",
+            "modeOfDelivery": "accountHolderName",
+            "document": [
+                {
+                    "name": "name",
+                    "url": ""
+                },
+                {
+                    "name": "name",
+                    "url": ""
+                },
+                {
+                    "name": "name",
+                    "url": ""
+                }
+            ]
+        }
+    Response:
+    {
+        "code": 200,
+        "message": "added successfully",
+        "type": "object",
+        "object": []
+    }
+```
+		
+
+*CURL*
+```json
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "openDate": "01-01-2000",
+    "closingDate": "01-01-2000",
+    "requiredDeliveryDate": "01-01-2000",
+    "rfqType": "this",
+    "location": "head office",
+    "note": "this is note",
+    "products": [
+        {
+            "item": {
+                "id": 1,
+                "details": {
+                    "itemName": "mouse",
+                    "price": 12,
+                    "unit": "each",
+                    "itemType": "product",
+                    "category": "tech",
+                    "supplier": {
+                        "id": 1,
+                        "name": "andrew choudhary",
+                        "email": "this@gmail.com",
+                        "contact": "+91 9876543210",
+                        "telephoneNo": "012-65432",
+                        "designationNo": "1233",
+                        "automateSending": "true",
+                        "city": "jaipur",
+                        "state": "rajasthan",
+                        "postalCode": "13468",
+                        "country": "USA",
+                        "paymentTerms": "terms",
+                        "category": "cat",
+                        "address": "Street no. B6, Miami",
+                        "status": "active",
+                        "company": {
+                            "name": "amazone",
+                            "registrationNo": "123"
+                        },
+                        "bankDetails": {
+                            "accountHolderName": "jitin",
+                            "accountNo": "1234565789",
+                            "bank": "ABCD",
+                            "taxId": "DFS55465dFS",
+                            "currency": {
+                                "id": 1,
+                                "code": "USD",
+                                "name": "doller",
+                                "countryName": "USA",
+                                "countryCode": 1
+                            }
+                        },
+                        "document": [
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            }
+                        ]
+                    }
+                }
+            },
+            "quantity": 2
+        },
+        {
+            "item": {
+                "id": 1,
+                "itemName": "mouse",
+                "price": 12,
+                "unit": "each",
+                "itemType": "product",
+                "category": "tech",
+                "supplier": {
+                    "id": 1,
+                    "name": "andrew choudhary",
+                    "email": "this@gmail.com",
+                    "contact": "+91 9876543210",
+                    "telephoneNo": "012-65432",
+                    "designationNo": "1233",
+                    "automateSending": "true",
+                    "city": "jaipur",
+                    "state": "rajasthan",
+                    "postalCode": "13468",
+                    "country": "USA",
+                    "paymentTerms": "terms",
+                    "category": "cat",
+                    "address": "Street no. B6, Miami",
+                    "status": "active",
+                    "company": {
+                        "name": "amazone",
+                        "registrationNo": "123"
+                    },
+                    "bankDetails": {
+                        "accountHolderName": "jitin",
+                        "accountNo": "1234565789",
+                        "bank": "ABCD",
+                        "taxId": "DFS55465dFS",
+                        "currency": {
+                            "id": 1,
+                            "code": "USD",
+                            "name": "doller",
+                            "countryName": "USA",
+                            "countryCode": 1
+                        }
+                    },
+                    "document": [
+                        {
+                            "name": "name",
+                            "url": ""
+                        },
+                        {
+                            "name": "name",
+                            "url": ""
+                        },
+                        {
+                            "name": "name",
+                            "url": ""
+                        }
+                    ]
+                }
+            },
+            "quantity": 2
+        }
+    ],
+    "paymentTerms": "terms",
+    "paymentMode": "ABCD",
+    "incoterms": "ABCD",
+    "modeOfDelivery": "accountHolderName",
+    "document": [
+        {
+            "name": "name",
+            "url": ""
+        },
+        {
+            "name": "name",
+            "url": ""
+        },
+        {
+            "name": "name",
+            "url": ""
+        }
+    ]
+}'
+```
+**/quotation**
+
+Api to update quotation.
+```json
+	Method: PUT
+    Request Body:
+      {
+            "id": 1,
+            "details": {
+                "openDate": "01-01-2000",
+                "closingDate": "01-01-2000",
+                "requiredDeliveryDate": "01-01-2000",
+                "rfqType": "demo",
+                "location": "head office",
+                "note": "this is note",
+                "products": [
+                    {
+                        "item": {
+                            "id": 1,
+                            "details": {
+                                "itemName": "mouse",
+                                "price": 12,
+                                "unit": "each",
+                                "itemType": "product",
+                                "category": "tech",
+                                "supplier": {
+                                    "id": 1,
+                                    "name": "andrew choudhary",
+                                    "email": "this@gmail.com",
+                                    "contact": "+91 9876543210",
+                                    "telephoneNo": "012-65432",
+                                    "designationNo": "1233",
+                                    "automateSending": "true",
+                                    "city": "jaipur",
+                                    "state": "rajasthan",
+                                    "postalCode": "13468",
+                                    "country": "USA",
+                                    "paymentTerms": "terms",
+                                    "category": "cat",
+                                    "address": "Street no. B6, Miami",
+                                    "status": "active",
+                                    "company": {
+                                        "name": "amazone",
+                                        "registrationNo": "123"
+                                    },
+                                    "bankDetails": {
+                                        "accountHolderName": "jitin",
+                                        "accountNo": "1234565789",
+                                        "bank": "ABCD",
+                                        "taxId": "DFS55465dFS",
+                                        "currency": {
+                                            "id": 1,
+                                            "code": "USD",
+                                            "name": "doller",
+                                            "countryName": "USA",
+                                            "countryCode": 1
+                                        }
+                                    },
+                                    "document": [
+                                        {
+                                            "name": "name",
+                                            "url": ""
+                                        },
+                                        {
+                                            "name": "name",
+                                            "url": ""
+                                        },
+                                        {
+                                            "name": "name",
+                                            "url": ""
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "quantity": 2
+                    },
+                    {
+                        "item": {
+                            "id": 1,
+                            "itemName": "mouse",
+                            "price": 12,
+                            "unit": "each",
+                            "itemType": "product",
+                            "category": "tech",
+                            "supplier": {
+                                "id": 1,
+                                "name": "andrew choudhary",
+                                "email": "this@gmail.com",
+                                "contact": "+91 9876543210",
+                                "telephoneNo": "012-65432",
+                                "designationNo": "1233",
+                                "automateSending": "true",
+                                "city": "jaipur",
+                                "state": "rajasthan",
+                                "postalCode": "13468",
+                                "country": "USA",
+                                "paymentTerms": "terms",
+                                "category": "cat",
+                                "address": "Street no. B6, Miami",
+                                "status": "active",
+                                "company": {
+                                    "name": "amazone",
+                                    "registrationNo": "123"
+                                },
+                                "bankDetails": {
+                                    "accountHolderName": "jitin",
+                                    "accountNo": "1234565789",
+                                    "bank": "ABCD",
+                                    "taxId": "DFS55465dFS",
+                                    "currency": {
+                                        "id": 1,
+                                        "code": "USD",
+                                        "name": "doller",
+                                        "countryName": "USA",
+                                        "countryCode": 1
+                                    }
+                                },
+                                "document": [
+                                    {
+                                        "name": "name",
+                                        "url": ""
+                                    },
+                                    {
+                                        "name": "name",
+                                        "url": ""
+                                    },
+                                    {
+                                        "name": "name",
+                                        "url": ""
+                                    }
+                                ]
+                            }
+                        },
+                        "quantity": 2
+                    }
+                ],
+                "paymentTerms": "terms",
+                "paymentMode": "ABCD",
+                "incoterms": "ABCD",
+                "modeOfDelivery": "accountHolderName",
+                "document": [
+                    {
+                        "name": "name",
+                        "url": ""
+                    },
+                    {
+                        "name": "name",
+                        "url": ""
+                    },
+                    {
+                        "name": "name",
+                        "url": ""
+                    }
+                ]
+            }
+        }
+	Response:
+		{
+            "code": 200,
+            "message": "successfully updated",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+ curl --location --request PUT 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 1,
+    "details": {
+        "openDate": "01-01-2000",
+        "closingDate": "01-01-2000",
+        "requiredDeliveryDate": "01-01-2000",
+        "rfqType": "demo",
+        "location": "head office",
+        "note": "this is note",
+        "products": [
+            {
+                "item": {
+                    "id": 1,
+                    "details": {
+                        "itemName": "mouse",
+                        "price": 12,
+                        "unit": "each",
+                        "itemType": "product",
+                        "category": "tech",
+                        "supplier": {
+                            "id": 1,
+                            "name": "andrew choudhary",
+                            "email": "this@gmail.com",
+                            "contact": "+91 9876543210",
+                            "telephoneNo": "012-65432",
+                            "designationNo": "1233",
+                            "automateSending": "true",
+                            "city": "jaipur",
+                            "state": "rajasthan",
+                            "postalCode": "13468",
+                            "country": "USA",
+                            "paymentTerms": "terms",
+                            "category": "cat",
+                            "address": "Street no. B6, Miami",
+                            "status": "active",
+                            "company": {
+                                "name": "amazone",
+                                "registrationNo": "123"
+                            },
+                            "bankDetails": {
+                                "accountHolderName": "jitin",
+                                "accountNo": "1234565789",
+                                "bank": "ABCD",
+                                "taxId": "DFS55465dFS",
+                                "currency": {
+                                    "id": 1,
+                                    "code": "USD",
+                                    "name": "doller",
+                                    "countryName": "USA",
+                                    "countryCode": 1
+                                }
+                            },
+                            "document": [
+                                {
+                                    "name": "name",
+                                    "url": ""
+                                },
+                                {
+                                    "name": "name",
+                                    "url": ""
+                                },
+                                {
+                                    "name": "name",
+                                    "url": ""
+                                }
+                            ]
+                        }
+                    }
+                },
+                "quantity": 2
+            },
+            {
+                "item": {
+                    "id": 1,
+                    "itemName": "mouse",
+                    "price": 12,
+                    "unit": "each",
+                    "itemType": "product",
+                    "category": "tech",
+                    "supplier": {
+                        "id": 1,
+                        "name": "andrew choudhary",
+                        "email": "this@gmail.com",
+                        "contact": "+91 9876543210",
+                        "telephoneNo": "012-65432",
+                        "designationNo": "1233",
+                        "automateSending": "true",
+                        "city": "jaipur",
+                        "state": "rajasthan",
+                        "postalCode": "13468",
+                        "country": "USA",
+                        "paymentTerms": "terms",
+                        "category": "cat",
+                        "address": "Street no. B6, Miami",
+                        "status": "active",
+                        "company": {
+                            "name": "amazone",
+                            "registrationNo": "123"
+                        },
+                        "bankDetails": {
+                            "accountHolderName": "jitin",
+                            "accountNo": "1234565789",
+                            "bank": "ABCD",
+                            "taxId": "DFS55465dFS",
+                            "currency": {
+                                "id": 1,
+                                "code": "USD",
+                                "name": "doller",
+                                "countryName": "USA",
+                                "countryCode": 1
+                            }
+                        },
+                        "document": [
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            },
+                            {
+                                "name": "name",
+                                "url": ""
+                            }
+                        ]
+                    }
+                },
+                "quantity": 2
+            }
+        ],
+        "paymentTerms": "terms",
+        "paymentMode": "ABCD",
+        "incoterms": "ABCD",
+        "modeOfDelivery": "accountHolderName",
+        "document": [
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            },
+            {
+                "name": "name",
+                "url": ""
+            }
+        ]
+    }
+}'
+```
+**/quotation**
+
+Api to search quotation.
+
+```json
+	Method: GET
+    Request Body:
+        { "Key" : "value for search" }
+	Response:
+		{
+            "code": 200,
+            "message": "search successfully",
+            "type": "object",
+            "object": [ *Array of resultant objects* ]
+        } 
+```
+
+*CURL*
+```json
+curl --location --request GET 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation?id=71' \
+--data-raw ''
+```
+**/quotation**
+
+Api to delete quotation.
+
+```json 
+	Method: DELETE
+	Request Body:
+        { "id" : 1 }
+	Response:
+		{
+            "code": 200,
+            "message": "delete successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+```json 
+curl --location --request DELETE 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":5
+}'
+```
+
+**/quotation/deactivate**
+
+Api to quotation deactivation.
+
+```json
+	Method: POST
+	RequestBody:
+		{
+            "id": 36,
+        }
+	Response:
+	   {
+            "code": 200,
+            "message": "quotation deactivated successfully",
+            "type": "object",
+            "object": []
+        }
+```
+
+*CURL*
+
+```json
+curl --location --request POST 'https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/quotation/deactivate' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id":71
+}'
+```
 
 ## **Approvers-Entity**
 ```json
