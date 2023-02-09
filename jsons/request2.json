@@ -18,7 +18,7 @@
         "note": "this is note",
         "status": "ACTIVE",
         "progressStage": "new",
-        "totalAmount": 824,
+        "totalAmount": "824",
         "department": "development",
         "document": [
             {
@@ -34,22 +34,11 @@
                 "url": "http://demo.com"
             }
         ],
-        "products": [
-            {
-                "item": {
-                    "id": 1,
-                    "details": {
-                        "itemName": "mouse",
-                        "price": 12,
-                        "unit": "each",
-                        "itemType": "product",
-                        "category": "tech",
-                        "imgUrl": "http://imgSynectiks.com",
-                        "status": "ACTIVE"
-                    }
-                },
-                "quantity": 2
-            }
-        ]
+        "productIds": [
+            1,
+            24,
+            2
+        ],
+        "departmentId": "12"
     }
 }

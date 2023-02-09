@@ -1,0 +1,23 @@
+{
+    "id": 1,
+    "details": {
+        "title": "sint architecto enim",
+        "description": "Quia eos sit suscipit. Autem libero delectus beatae. Iusto deleniti deleniti aspernatur est at distinctio laboriosam aut magni.",
+        "status": "a",
+        "time": "2055-08-25T17:34:44.608Z",
+        "progressPer": 76,
+        "type": "nesciunt",
+        "isPined": "true",
+        "users": [
+            {
+                "url": "http://placeimg.com/640/480"
+            },
+            {
+                "url": "http://placeimg.com/640/480"
+            },
+            {
+                "url": "http://placeimg.com/640/480"
+            }
+        ]
+    }
+}
