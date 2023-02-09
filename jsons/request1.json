@@ -33,6 +33,18 @@
                 "url": ""
             }
         ],
+        "comments": [
+            {
+                "commentBy": "jitin",
+                "commentOn": "12:00 12-12-1212",
+                "comment": "this is new comment on this request"
+            },
+            {
+                "commentBy": "jasmin",
+                "commentOn": "12:00 12-12-1212",
+                "comment": "this is new comment on this request"
+            }
+        ],
         "products": [
             {
                 "item": {
