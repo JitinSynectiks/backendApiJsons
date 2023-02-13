@@ -1437,7 +1437,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\": [\r\n        \"goyalpawan357@gmail.com\",\r\n        \"riteshgarg416@gmail.com\",\r\n        \"sandeepjiswami@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\",\r\n    \"attachment\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROR0O2H-FusQQa0AetWhBuspFurVB7p4DAkiq9sZ8&s\"\r\n}",
+							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\": [\r\n        \"jkg3358191@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\",\r\n    \"attachment\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROR0O2H-FusQQa0AetWhBuspFurVB7p4DAkiq9sZ8&s\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1445,17 +1445,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://u4kzlb58qh.execute-api.us-east-1.amazonaws.com/procurement-dev/email",
-							"protocol": "https",
+							"raw": "{{baseUrl}}/email",
 							"host": [
-								"u4kzlb58qh",
-								"execute-api",
-								"us-east-1",
-								"amazonaws",
-								"com"
+								"{{baseUrl}}"
 							],
 							"path": [
-								"procurement-dev",
 								"email"
 							]
 						}
@@ -1472,7 +1466,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"from\": \"jkgoyal85@gmail.com\",\r\n    \"to\": [\r\n        \"jkg335819@gmail.com\"\r\n    ],\r\n    \"content\": \"This is testing from lambda with variables\",\r\n    \"subject\": \"subject1111\"\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1480,7 +1474,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/email",
+							"raw": "{{baseUrl}}/email?from=jkgoyal85@gmail.com",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -1490,8 +1484,7 @@
 							"query": [
 								{
 									"key": "from",
-									"value": "jkgoyal85@gmail.com",
-									"disabled": true
+									"value": "jkgoyal85@gmail.com"
 								}
 							]
 						}
@@ -1918,6 +1911,148 @@
 							],
 							"path": [
 								"department",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kanban",
+			"item": [
+				{
+					"name": "addKanban",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"sint architecto enim\",\r\n    \"description\": \"Quia eos sit suscipit. Autem libero delectus beatae. Iusto deleniti deleniti aspernatur est at distinctio laboriosam aut magni.\",\r\n    \"status\": \"a\",\r\n    \"time\": \"2055-08-25T17:34:44.608Z\",\r\n    \"progressPer\": 76,\r\n    \"type\": \"nesciunt\",\r\n    \"isPined\": \"true\",\r\n    \"users\": [\r\n        {\r\n            \"url\": \"http://placeimg.com/640/480\"\r\n        },\r\n        {\r\n            \"url\": \"http://placeimg.com/640/480\"\r\n        },\r\n        {\r\n            \"url\": \"http://placeimg.com/640/480\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/kanban",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"kanban"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deactivateKanban",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/kanban/deactivate/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"kanban",
+								"deactivate",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteKanban",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/kanban/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"kanban",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchKanban",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/kanban",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"kanban"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateKanban",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"sint architecto enim jitin\",\r\n    \"description\": \"Quia eos sit suscipit. Autem libero delectus beatae. Iusto deleniti deleniti aspernatur est at distinctio laboriosam aut magni.\",\r\n    \"status\": \"a\",\r\n    \"time\": \"2055-08-25T17:34:44.608Z\",\r\n    \"progressPer\": 76,\r\n    \"type\": \"nesciunt\",\r\n    \"isPined\": \"true\",\r\n    \"users\": [\r\n        {\r\n            \"url\": \"http://placeimg.com/640/480\"\r\n        },\r\n        {\r\n            \"url\": \"http://placeimg.com/640/480\"\r\n        },\r\n        {\r\n            \"url\": \"http://placeimg.com/640/480\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/kanban/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"kanban",
 								"2"
 							]
 						}
