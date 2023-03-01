@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "details": {
+        "TotalBudget": 1558729,
+        "UsedBudget": 15177,
+        "UsedBudgetPercentage": 28,
+        "CommitedBudgetPercentage": 65,
+        "AvaliableBudget": 1346750,
+        "CommitedBudget": 81280,
+        "BudgetId": 122909,
+        "Department": "Games"
+    }
+}
